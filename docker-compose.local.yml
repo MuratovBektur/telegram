@@ -1,0 +1,62 @@
+version: "3"
+
+services:
+  telegram_server:
+    container_name: "telegram_server"
+    restart: "no"
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    environment:
+      - TZ=Europe/Moscow
+      - NODE_ENV=development
+      - PORT=4000
+      - HOST=0.0.0.0
+      - RECEIPT_HOST=https://receipt-dev.grattis.ru/api
+      - SENDER_HOST=https://sender-dev.grattis.ru
+      - SENDER_USER=apihka
+      - SENDER_PASS=aokfUQj4Gb
+    ports:
+      - 4000
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./server:/src
+      - /src/node_modules
+    command: nodemon
+    extra_hosts:
+      - "mongo1:95.216.153.187"
+  telegram_client:
+    container_name: "telegram_client"
+    restart: "no"
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    environment:
+      - TZ=Europe/Moscow
+      - NODE_ENV=development
+      - PORT=8080
+      - HOST=0.0.0.0
+    ports:
+      - 8080
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./client:/src
+      - ./client/dist:/src/dist
+      - /src/node_modules
+    command: npm run serve
+  telegram_nginx:
+    image: nginx
+    restart: "no"
+    container_name: "telegram_nginx"
+    ports:
+      - 8000:80
+    depends_on:
+      - telegram_server
+      - telegram_client
+    links:
+      - telegram_server
+      - telegram_client
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./nginx/sites-available-local:/etc/nginx/sites-available
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
