@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
+import { onBeforeMount } from "vue";
+onBeforeMount(() => {
+  document.title = 'telegram'
+});
 </script>
 
 <template>

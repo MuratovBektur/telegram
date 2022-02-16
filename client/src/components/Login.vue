@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { onMounted, reactive, defineEmits } from "vue";
-import { useStore } from "vuex";
+import { reactive, defineEmits } from "vue";
+import { sendToWebSocket, subscribe } from "../lib/api";
 
 const emit = defineEmits(["setLoginState"]);
 function stringify(obj: any) {
@@ -12,30 +12,20 @@ interface IState {
 const state: IState = reactive({
   token: "",
 });
-const store = useStore();
-function connectToWebSocket() {
-  const socket: WebSocket = new WebSocket("ws://localhost:8000/api");
-  socket.onopen = function (e: Event) {
-    store.commit("setSocket", socket);
-    console.log("e", e);
-  };
-  socket.onerror = function (e: Event) {
-    console.log("e", e);
-    store.commit("unSetSocket");
-  };
-}
-onMounted(() => {
-  connectToWebSocket();
-});
+
 function login() {
-  if (store.state.socket === null || isNaN(+state.token)) return;
-  store.state.socket.send(
-    stringify({
-      type: "login",
-      token: "t" + state.token,
-    })
-  );
-  emit("setLoginState", true);
+  if (isNaN(+state.token)) return;
+  sendToWebSocket({
+    action: "login",
+    token: "t" + state.token,
+  });
+  subscribe('login', (status: string) => {
+    if (!status) {
+      emit("setLoginState", false);
+      return;
+    }
+    emit("setLoginState", true);
+  });
 }
 </script>
 

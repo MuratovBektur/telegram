@@ -42,11 +42,20 @@ console.log('in2');
 
 wss.on('connection', function connection(ws) {
   checkIsAliveWS(wss, ws)
+  ws.post = function (data, ...args) {
+    if (!!data && typeof data === 'object') {
+      return ws.send(JSON.stringify(data, ...args));
+    }
+    return ws.send(data, ...args)
+  }
   ws.on('message', function message(data) {
     onGetMessage(wss, ws, data)
   });
 
-  ws.send('connected 2');
+  ws.post({
+    type: 'connection',
+    status: 1
+  });
 });
 
 server.listen(PORT, () => console.log('http/ws server listening on', PORT));

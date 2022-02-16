@@ -1,4 +1,4 @@
-export function login (token) {
+export function checkToken (token) {
   if (typeof token !== 'string' || !token.startsWith('t')) {
     return null
   }

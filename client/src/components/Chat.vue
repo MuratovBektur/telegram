@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { onMounted, reactive } from "vue";
 import { useStore } from "vuex";
-function stringify(obj: any) {
-  return JSON.stringify(obj);
-}
+import { sendToWebSocket, subscribe } from "../lib/api";
 const store = useStore();
 interface IState {
   addedUser: string;
@@ -14,35 +12,22 @@ const state: IState = reactive({
   userList: [],
 });
 onMounted(() => {
-  if (store.state.socket === null) return;
-  store.state.socket.onerror = function (e: Event) {
-    console.log("e", e);
-    store.commit("unSetSocket");
-  };
-  store.state.socket.onmessage = function (e: MessageEvent) {
-    const data = JSON.parse(e.data);
-    if (data.type === "userList") {
-      state.userList = data.userList;
-    }
-  };
   getUserList();
+  subscribe("userList", (userList: string[]) => {
+    state.userList = userList;
+  });
 });
 function addUser() {
-  if (store.state.socket === null) return;
-  store.state.socket.send(
-    stringify({
-      type: "addUser",
-      user: state.addedUser,
-    })
-  );
+  sendToWebSocket({
+    action: "addUser",
+    user: state.addedUser,
+  });
 }
 function getUserList() {
-  if (store.state.socket === null) return;
-  store.state.socket.send(
-    stringify({
-      type: "getUserList",
-    })
-  );
+  sendToWebSocket({
+    action: "getUserList",
+    user: state.addedUser,
+  });
 }
 </script>
 

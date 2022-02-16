@@ -1,10 +1,15 @@
-import {  isJsonString, login } from './index.js';
+// import { stringify } from 'querystring';
+import { isJsonString, checkToken } from './index.js';
 
 // const clients = []
+// stringify
 const userList = {}
 
-function getTokenBySockedt (wss) {
-  ws
+const post = function (ws, data, ...args) {
+  if (!data && typeof data === 'object') {
+    return ws.send(JSON.stringify(data, ...args));
+  }
+  return ws.send(data, ...args)
 }
 
 export function onGetMessage (wss, ws, data) {
@@ -15,33 +20,47 @@ export function onGetMessage (wss, ws, data) {
   }
   data = JSON.parse(data);
 
-  switch (data.type) {
+  console.log('data', data)
+
+  switch (data.action) {
     case 'login':
-      const token = login(data.token);
+      const token = checkToken(data.token);
+      console.log('token', token)
       if (!token) {
-        return ws.send(JSON.stringify({
+        return ws.post({
+          type: 'login',
+          status: 0,
           error: 'Invalid token'
-        }));
+        })
+        // return ws.send(JSON.stringify());
       }
       ws.token = token
-      // clients.push(ws)
-      // console.log(clients);
-      console.log(wss.clients);
+      return ws.post({
+        type: 'login',
+        status: 1
+      })
       break;
     case 'addUser':
       console.log('ws.token', ws.token);
-      if (userList[data.user]) {
+      if (userList[ws.token]) {
         userList[ws.token].push(data.user)
       } else {
         userList[ws.token] = [data.user]
       }
-      console.log(userList)
+      console.log('userList', userList)
+      wss.clients.forEach(function each(client) {
+        console.log('client', client)
+        client.post({  
+          type: 'userList',
+          userList: userList[ws.token]
+        })
+      })
       break;
     case 'getUserList':
-      ws.send(JSON.stringify({
+      ws.post({
         type: 'userList',
         userList: userList[ws.token]
-      }))
+      })
       console.log('ws.token', ws.token);
       break;
   }
