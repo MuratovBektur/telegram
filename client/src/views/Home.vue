@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Login from "../components/Login.vue";
-import Chat from "../components/Chat.vue";
+// import Login from "../components/Login.vue";
+// import Chat from "../components/Chat.vue";
 import { reactive } from "vue";
 interface IState {
   isLogged: boolean;
@@ -14,8 +14,9 @@ function setLoginState(data: boolean) {
 </script>
 
 <template>
-  <Login @setLoginState="setLoginState" v-if="!state.isLogged" />
-  <Chat v-else />
+<div>test</div>
+  <!-- <Login @setLoginState="setLoginState" v-if="!state.isLogged" />
+  <Chat v-else /> -->
 </template>
 
 <style scoped>

@@ -4,25 +4,23 @@ services:
   telegram_server:
     container_name: "telegram_server"
     restart: "no"
+    env_file:
+    - local.env
     build:
       context: ./server
       dockerfile: Dockerfile
     environment:
-      - TZ=Europe/Moscow
+      - TZ=Asia/Bishkek
       - NODE_ENV=development
       - PORT=4000
       - HOST=0.0.0.0
-      - RECEIPT_HOST=https://receipt-dev.grattis.ru/api
-      - SENDER_HOST=https://sender-dev.grattis.ru
-      - SENDER_USER=apihka
-      - SENDER_PASS=aokfUQj4Gb
     ports:
       - 4000
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./server:/src
       - /src/node_modules
-    command: nodemon
+    command: npm run dev
     extra_hosts:
       - "mongo1:95.216.153.187"
   telegram_client:
@@ -32,10 +30,11 @@ services:
       context: ./client
       dockerfile: Dockerfile
     environment:
-      - TZ=Europe/Moscow
+      - TZ=Asia/Bishkek
       - NODE_ENV=development
       - PORT=8080
       - HOST=0.0.0.0
+      - API_HOST=http://telegram_api:4000/api
     ports:
       - 8080
     volumes:

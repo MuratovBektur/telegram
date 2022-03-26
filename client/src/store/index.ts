@@ -1,22 +1,40 @@
 import { createStore } from "vuex";
 
+interface ICountry {
+  name: string;
+  phone: string;
+  format: string;
+}
+
 interface IState {
-  socket: WebSocket | null;
+  country: ICountry;
+  countries: ICountry[];
+  countryNameByIp: string;
 }
 
 const store = createStore<IState>({
   state() {
     return {
-      socket: null,
+      country: {
+        name: "",
+        phone: "",
+        format: "",
+        code: "",
+      },
+      countries: [],
+      countryNameByIp: ''
     };
   },
   mutations: {
-    setSocket(state: IState, socket: WebSocket) {
-      state.socket = socket;
+    SET_COUNTRY(state: IState, country: ICountry) {
+      state.country = country;
     },
-    unSetSocket(state: IState) {
-      state.socket = null;
+    SET_COUNTRIES(state: IState, countries: ICountry[]) {
+      state.countries = countries;
     },
+    SET_COUNTRY_NAME_BY_IP(state: IState, countryNameByIp: string) {
+      state.countryNameByIp = countryNameByIp;
+    }
   },
 });
 

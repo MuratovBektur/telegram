@@ -22,6 +22,7 @@ function addUser() {
     action: "addUser",
     user: state.addedUser,
   });
+  state.addedUser = "";
 }
 function getUserList() {
   sendToWebSocket({
