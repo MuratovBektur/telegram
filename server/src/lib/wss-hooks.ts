@@ -3,8 +3,6 @@ import Emitter from "events"
 import path from 'path'
 import fs from 'fs'
 
-console.log('WebSocketServer', WebSocketServer);
-
 const emitter = new Emitter()
 type WebSocketServerCb = (...args: any[]) => any
 type WebSocketServerOptions = {
@@ -29,7 +27,7 @@ const normalizeData = (data: BinaryData): Array <any> | false => {
 
 const isEmpty = (data: any):boolean => data === null || data === undefined
 
-export function wss(options: WebSocketServerOptions, cb?: WebSocketServerCb) {
+function wss(options: WebSocketServerOptions, cb?: WebSocketServerCb) {
   const socketServer = new WebSocketServer(options, cb)
   socketServer.on("connection", function connection(ws: any) {
     ws.post = function (event: string, data: any) {
@@ -53,11 +51,11 @@ export function wss(options: WebSocketServerOptions, cb?: WebSocketServerCb) {
   return socketServer
 }
 
-export function hook (event: string, cb: (data: any) => any) {
+function hook (event: string, cb: (data: any) => any) {
   emitter.on(event, cb)
 }
 
-export function pathToHooks (dirname: 'string', nameFolder: 'string') {
+function pathToHooks (dirname: 'string', nameFolder: 'string') {
   let normalizedFolder = path.join(dirname, nameFolder)
 
   fs
@@ -67,8 +65,8 @@ export function pathToHooks (dirname: 'string', nameFolder: 'string') {
     })
 }
 
-// export default {
-//   wss,
-//   hook,
-//   pathToHooks
-// }
+export const wssHooks = {
+  wss,
+  hook,
+  pathToHooks
+}

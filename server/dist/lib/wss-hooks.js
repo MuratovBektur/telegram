@@ -2,7 +2,6 @@ import { WebSocketServer } from 'ws';
 import Emitter from "events";
 import path from 'path';
 import fs from 'fs';
-console.log('WebSocketServer', WebSocketServer);
 const emitter = new Emitter();
 function getJSON(str) {
     try {
@@ -19,7 +18,7 @@ const normalizeData = (data) => {
     return Array.isArray(o) && o.length > 0 && o;
 };
 const isEmpty = (data) => data === null || data === undefined;
-export function wss(options, cb) {
+function wss(options, cb) {
     const socketServer = new WebSocketServer(options, cb);
     socketServer.on("connection", function connection(ws) {
         ws.post = function (event, data) {
@@ -42,10 +41,10 @@ export function wss(options, cb) {
     });
     return socketServer;
 }
-export function hook(event, cb) {
+function hook(event, cb) {
     emitter.on(event, cb);
 }
-export function pathToHooks(dirname, nameFolder) {
+function pathToHooks(dirname, nameFolder) {
     let normalizedFolder = path.join(dirname, nameFolder);
     fs
         .readdirSync(normalizedFolder)
@@ -53,8 +52,8 @@ export function pathToHooks(dirname, nameFolder) {
         await import(normalizedFolder + '/' + file);
     });
 }
-// export default {
-//   wss,
-//   hook,
-//   pathToHooks
-// }
+export const wssHooks = {
+    wss,
+    hook,
+    pathToHooks
+};

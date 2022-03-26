@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import request from "@/lib/api";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 import { computed, onMounted, reactive, ref, watch } from "vue";
+import api from "@/lib/api";
 import CountryList from "@/components/t-country-list.vue";
 import TCheckBox from "@/components/t-check-box.vue";
 import TInput from "@/components/t-input.vue";
@@ -26,22 +26,26 @@ const state = reactive({
 });
 
 async function getGeo() {
-  const country = store.state.country
-  if (country.code) {
-    onSelectCountry(country)
-  }
-  else {
-    const [countries, countryNameByIp] = await Promise.all([
-      request.getCoutries(),
-      request.getGeo(),
-    ]);
-    store.commit('SET_COUNTRIES', countries)
-    if (countryNameByIp) {
-      const country = countries.find((country: any) => country.code === countryNameByIp);
-      if (country) {
-        onSelectCountry(country)
+  try {
+    const country = store.state.country
+    if (country.code) {
+      onSelectCountry(country)
+    }
+    else {
+      const [countries, countryNameByIp] = await Promise.all([
+        api.get('get-countries'),
+        api.get('get-country-code'),
+      ]);
+      store.commit('SET_COUNTRIES', countries)
+      if (countryNameByIp) {
+        const country = countries.find((country: any) => country.code === countryNameByIp);
+        if (country) {
+          onSelectCountry(country)
+        }
       }
     }
+  } catch (e) {
+    console.error(e);
   }
 }
 
@@ -83,8 +87,8 @@ const selectedCountry = reactive({
 const showAllCountries = ref(false);
 
 const showSubmitBtn = computed(() => {
-  const phone = selectedCountry.phone;
-  const format = selectedCountry.format;
+  const phone = selectedCountry.phone.replaceAll(/\s/g, '');
+  const format = selectedCountry.format.replaceAll(/\s/g, '');
   return phone.startsWith("+") && phone.length === format.length
 });
 
@@ -118,10 +122,7 @@ async function submitForm() {
   if (isCheckingPhoneNumber.value) return;
   isCheckingPhoneNumber.value = true;
   setTimeout(async () => {
-    const isValid =
-      selectedCountry.phone.length === selectedCountry.format.length &&
-      isMatchPhoneFormatPattern(selectedCountry.phone, selectedCountry.format)
-
+    const isValid = /\+[\d\s]+/.test(selectedCountry.phone);
     if (isValid) {
       store.commit("SET_COUNTRY", selectedCountry);
       store.commit('SET_COUNTRY_NAME_BY_IP', selectedCountry.code)

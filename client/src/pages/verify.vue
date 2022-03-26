@@ -1,18 +1,51 @@
 <script setup lang="ts">
-import { reactive } from "vue";
+import { reactive, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 import TInput from "@/components/t-input.vue";
+import api from "@/lib/api";
 
 const store = useStore();
 const router = useRouter();
 
-if (!store.state.country) {
+if (!store.state.country.name) {
   router.push("/login");
+}
+
+async function sendCode (phoneNumber: string) {
+  try {
+    await api.post('send-code-number', { phoneNumber })
+  } catch (e) {
+    console.error( e);
+  }
+}
+
+onMounted(() => {
+  sendCode(state.phoneNumber)
+})
+
+async function checkCode () {
+  try {
+    console.log('try');
+    if (state.code.length === 5) {
+      let result = await api.post('check-code-number', { phoneNumber: state.phoneNumber, code: state.code })
+      // console.log('result', result)
+      if (result === 'ok') {
+        router.push("/success");
+      } else {
+        state.isValid = false
+      }
+    }
+  } catch (e) {
+    state.isValid = false
+    console.error(e);
+  }
 }
 
 const state = reactive({
   code: "",
+  phoneNumber: store.state.country.phone,
+  isValid: true
 });
 </script>
 
@@ -35,7 +68,14 @@ const state = reactive({
       <div class="verify__title">
         We've sent the code to the Telegram app on your other device.
       </div>
-      <t-input label="Code" :focus="true" v-model="state.code" />
+      <t-input 
+        label="Code"
+        errorLabel="Invalid code"
+        :isValid="state.isValid"
+        :focus="true" 
+        v-model="state.code"
+        @on-input="checkCode"
+      />
     </div>
   </div>
 </template>

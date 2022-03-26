@@ -1,4 +1,6 @@
-import { hook } from "../lib/wss-hooks.js";
+import { wssHooks } from "../lib/index.js";
+
+const { hook } = wssHooks;
 
 hook("test", ({ ws, data }: { ws: any; data: any }) => {
   if (!isNaN(data)) data *= 2;

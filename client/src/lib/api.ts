@@ -1,22 +1,22 @@
 import axios from "./axios";
 
 export interface IRequest {
-  getCoutries(): Promise<any>;
-  getGeo(): Promise<any>;
+  get (url: string): Promise<any>;
+  post (url: string, data?: any): Promise<any>;
 }
 
 class Request implements IRequest {
-  async getCoutries() {
+  async get(url: string) {
     try {
-      const res = await axios.get("/get-countries");
+      const res = await axios.get("/" + url);
       return res.data;
     } catch (error) {
       console.log(error);
     }
   }
-  async getGeo() {
+  async post(url: string, data?: any) {
     try {
-      const res = await axios.get("/get-geo");
+      const res = await axios.post("/" + url, data);
       return res.data;
     } catch (error) {
       console.log(error);
