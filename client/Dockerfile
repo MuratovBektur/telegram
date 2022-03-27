@@ -8,4 +8,4 @@ COPY package.json /src/package.json
 
 RUN yarn install
 
-CMD ["yarn", "serve"]
+COPY . .
