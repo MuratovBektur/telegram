@@ -1,6 +1,16 @@
 git pull;
-curl -o- -L https://yarnpkg.com/install.sh | bash;
-cd client && yarn build;
+
+cd client;
+# build new container for build vue app
+docker build -f Dockerfile.build_client -t telegram_build_client .;
+# run container
+docker run --name TelegramBuildClient -itd telegram_build_client;
+# copy from container's dist folder to local dist foler
+sudo docker cp TelegramBuildClient:/src/dist .
+# remove container after using;
+docker container rm -f TelegramBuildClient;
+
+cd ..;
 docker-compose down;
 docker-compose up -d --build;
 docker-compose logs -f --tail=100;
