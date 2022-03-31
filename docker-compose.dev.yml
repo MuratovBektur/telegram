@@ -24,14 +24,9 @@ services:
     container_name: "telegram_server"
     restart: "no"
     env_file:
-    - dev.env
+      - ./server/configs/dev.env
     build:
       context: ./server
-    environment:
-      - TZ=Asia/Bishkek
-      - NODE_ENV=development
-      - PORT=4000
-      - HOST=0.0.0.0
     ports:
       - 4000
     volumes:

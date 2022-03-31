@@ -5,7 +5,7 @@ services:
     container_name: "telegram_server"
     restart: "no"
     env_file:
-    - .env
+      - ./server/configs/.env
     build:
       context: ./server
     environment:
