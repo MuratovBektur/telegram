@@ -17,13 +17,6 @@ type Country = {
   code: string;
   dialCode: string;
 };
-// code:"US"
-// dialCode:"1"
-// flag:"🇺🇸"
-// format:"+1 ... ... ...."
-// name:"USA"
-// phone:"+1 "
-// phoneCode:"1"
 const props = defineProps({
   countries: {
     type: Array as PropType<Country[]>,

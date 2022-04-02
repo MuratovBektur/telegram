@@ -5,7 +5,7 @@ export default [
         "flag": "🇦🇫",
         "code": "AF",
         "dialCode": "93",
-        "format": "+93 .. ... ...."
+        "format": "+.. .. ... ...."
     },
     {
         "name": "Albania",
@@ -13,7 +13,7 @@ export default [
         "flag": "🇦🇱",
         "code": "AL",
         "dialCode": "355",
-        "format": "+355 ... ... ..."
+        "format": "+... ... ... ..."
     },
     {
         "name": "Algeria",
@@ -21,7 +21,7 @@ export default [
         "flag": "🇩🇿",
         "code": "DZ",
         "dialCode": "213",
-        "format": "+213 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "American Samoa",
@@ -29,7 +29,7 @@ export default [
         "flag": "🇦🇸",
         "code": "AS",
         "dialCode": "1684",
-        "format": "+1684 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Andorra",
@@ -37,7 +37,7 @@ export default [
         "flag": "🇦🇩",
         "code": "AD",
         "dialCode": "376",
-        "format": "+376 ... ..."
+        "format": "+... ... ..."
     },
     {
         "name": "Angola",
@@ -45,7 +45,7 @@ export default [
         "flag": "🇦🇴",
         "code": "AO",
         "dialCode": "244",
-        "format": "+244 ... ... ..."
+        "format": "+... ... ... ..."
     },
     {
         "name": "Anguilla",
@@ -53,7 +53,7 @@ export default [
         "flag": "🇦🇮",
         "code": "AI",
         "dialCode": "1264",
-        "format": "+1264 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Antigua & Barbuda",
@@ -61,7 +61,7 @@ export default [
         "flag": "🇦🇬",
         "code": "AG",
         "dialCode": "1268",
-        "format": "+1268 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Argentina",
@@ -69,7 +69,7 @@ export default [
         "flag": "🇦🇷",
         "code": "AR",
         "dialCode": "54",
-        "format": "+54 ... ... ...."
+        "format": "+.. ... ... ...."
     },
     {
         "name": "Armenia",
@@ -77,7 +77,7 @@ export default [
         "flag": "🇦🇲",
         "code": "AM",
         "dialCode": "374",
-        "format": "+374 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Aruba",
@@ -85,7 +85,7 @@ export default [
         "flag": "🇦🇼",
         "code": "AW",
         "dialCode": "297",
-        "format": "+297 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "Australia",
@@ -93,7 +93,7 @@ export default [
         "flag": "🇦🇺",
         "code": "AU",
         "dialCode": "61",
-        "format": "+61 ... ... ..."
+        "format": "+.. ... ... ..."
     },
     {
         "name": "Austria",
@@ -101,7 +101,7 @@ export default [
         "flag": "🇦🇹",
         "code": "AT",
         "dialCode": "43",
-        "format": "+43 ... ... ...."
+        "format": "+.. ... ... ...."
     },
     {
         "name": "Azerbaijan",
@@ -109,7 +109,7 @@ export default [
         "flag": "🇦🇿",
         "code": "AZ",
         "dialCode": "994",
-        "format": "+994 .. ... .. .."
+        "format": "+... .. ... .. .."
     },
     {
         "name": "Bahamas",
@@ -117,7 +117,7 @@ export default [
         "flag": "🇧🇸",
         "code": "BS",
         "dialCode": "1242",
-        "format": "+1242 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Bahrain",
@@ -125,7 +125,7 @@ export default [
         "flag": "🇧🇭",
         "code": "BH",
         "dialCode": "973",
-        "format": "+973 .... ...."
+        "format": "+... .... ...."
     },
     {
         "name": "Bangladesh",
@@ -133,7 +133,7 @@ export default [
         "flag": "🇧🇩",
         "code": "BD",
         "dialCode": "880",
-        "format": "+880 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Barbados",
@@ -141,7 +141,7 @@ export default [
         "flag": "🇧🇧",
         "code": "BB",
         "dialCode": "1246",
-        "format": "+1246 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Belarus",
@@ -149,7 +149,7 @@ export default [
         "flag": "🇧🇾",
         "code": "BY",
         "dialCode": "375",
-        "format": "+375 .. ... .. .."
+        "format": "+... .. ... .. .."
     },
     {
         "name": "Belgium",
@@ -157,7 +157,7 @@ export default [
         "flag": "🇧🇪",
         "code": "BE",
         "dialCode": "32",
-        "format": "+32 ... .. .. .."
+        "format": "+.. ... .. .. .."
     },
     {
         "name": "Belize",
@@ -165,7 +165,7 @@ export default [
         "flag": "🇧🇿",
         "code": "BZ",
         "dialCode": "501",
-        "format": "+501 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "Benin",
@@ -173,7 +173,7 @@ export default [
         "flag": "🇧🇯",
         "code": "BJ",
         "dialCode": "229",
-        "format": "+229 .. .. ...."
+        "format": "+... .. .. ...."
     },
     {
         "name": "Bermuda",
@@ -181,7 +181,7 @@ export default [
         "flag": "🇧🇲",
         "code": "BM",
         "dialCode": "1441",
-        "format": "+1441 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Bhutan",
@@ -189,7 +189,7 @@ export default [
         "flag": "🇧🇹",
         "code": "BT",
         "dialCode": "975",
-        "format": "+975 . ... ..."
+        "format": "+... . ... ..."
     },
     {
         "name": "Bolivia",
@@ -197,7 +197,7 @@ export default [
         "flag": "🇧🇴",
         "code": "BO",
         "dialCode": "591",
-        "format": "+591 . ... ...."
+        "format": "+... . ... ...."
     },
     {
         "name": "Bonaire, Sint Eustatius & Saba",
@@ -205,7 +205,7 @@ export default [
         "flag": "🇧🇶",
         "code": "BQ",
         "dialCode": "599",
-        "format": "+599 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "Bosnia & Herzegovina",
@@ -213,7 +213,7 @@ export default [
         "flag": "🇧🇦",
         "code": "BA",
         "dialCode": "387",
-        "format": "+387 .. ...."
+        "format": "+... .. ...."
     },
     {
         "name": "Botswana",
@@ -221,7 +221,7 @@ export default [
         "flag": "🇧🇼",
         "code": "BW",
         "dialCode": "267",
-        "format": "+267 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Brazil",
@@ -229,7 +229,7 @@ export default [
         "flag": "🇧🇷",
         "code": "BR",
         "dialCode": "55",
-        "format": "+55 .. .... ...."
+        "format": "+.. .. .... ...."
     },
     {
         "name": "British Virgin Islands",
@@ -237,7 +237,7 @@ export default [
         "flag": "🇻🇬",
         "code": "VG",
         "dialCode": "1284",
-        "format": "+1284 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Brunei Darussalam",
@@ -245,7 +245,7 @@ export default [
         "flag": "🇧🇳",
         "code": "BN",
         "dialCode": "673",
-        "format": "+673 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "Bulgaria",
@@ -253,7 +253,7 @@ export default [
         "flag": "🇧🇬",
         "code": "BG",
         "dialCode": "359",
-        "format": "+359 ... ... ..."
+        "format": "+... ... ... ..."
     },
     {
         "name": "Burkina Faso",
@@ -261,7 +261,7 @@ export default [
         "flag": "🇧🇫",
         "code": "BF",
         "dialCode": "226",
-        "format": "+226 .. .. ...."
+        "format": "+... .. .. ...."
     },
     {
         "name": "Burundi",
@@ -269,7 +269,7 @@ export default [
         "flag": "🇧🇮",
         "code": "BI",
         "dialCode": "257",
-        "format": "+257 .. .. ...."
+        "format": "+... .. .. ...."
     },
     {
         "name": "Cambodia",
@@ -277,7 +277,7 @@ export default [
         "flag": "🇰🇭",
         "code": "KH",
         "dialCode": "855",
-        "format": "+855 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Cameroon",
@@ -285,7 +285,7 @@ export default [
         "flag": "🇨🇲",
         "code": "CM",
         "dialCode": "237",
-        "format": "+237 .... ...."
+        "format": "+... .... ...."
     },
     {
         "name": "Canada",
@@ -293,7 +293,7 @@ export default [
         "flag": "🇨🇦",
         "code": "CA",
         "dialCode": "1",
-        "format": "+1 ... ... ...."
+        "format": "+. ... ... ...."
     },
     {
         "name": "Cape Verde",
@@ -301,7 +301,7 @@ export default [
         "flag": "🇨🇻",
         "code": "CV",
         "dialCode": "238",
-        "format": "+238 ... .. .."
+        "format": "+... ... .. .."
     },
     {
         "name": "Cayman Islands",
@@ -309,7 +309,7 @@ export default [
         "flag": "🇰🇾",
         "code": "KY",
         "dialCode": "1345",
-        "format": "+1345 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Central African Rep.",
@@ -317,7 +317,7 @@ export default [
         "flag": "🇨🇫",
         "code": "CF",
         "dialCode": "236",
-        "format": "+236 .. .. ...."
+        "format": "+... .. .. ...."
     },
     {
         "name": "Chad",
@@ -325,7 +325,7 @@ export default [
         "flag": "🇹🇩",
         "code": "TD",
         "dialCode": "235",
-        "format": "+235 .. .. .. .."
+        "format": "+... .. .. .. .."
     },
     {
         "name": "Chile",
@@ -333,7 +333,7 @@ export default [
         "flag": "🇨🇱",
         "code": "CL",
         "dialCode": "56",
-        "format": "+56 . .... ...."
+        "format": "+.. . .... ...."
     },
     {
         "name": "China",
@@ -341,7 +341,7 @@ export default [
         "flag": "🇨🇳",
         "code": "CN",
         "dialCode": "86",
-        "format": "+86 .. ........"
+        "format": "+.. .. ........"
     },
     {
         "name": "Colombia",
@@ -349,7 +349,7 @@ export default [
         "flag": "🇨🇴",
         "code": "CO",
         "dialCode": "57",
-        "format": "+57 ... ... ...."
+        "format": "+.. ... ... ...."
     },
     {
         "name": "Comoros",
@@ -357,7 +357,7 @@ export default [
         "flag": "🇰🇲",
         "code": "KM",
         "dialCode": "269",
-        "format": "+269 .. ....."
+        "format": "+... .. ....."
     },
     {
         "name": "Congo (Dem. Rep.)",
@@ -365,7 +365,7 @@ export default [
         "flag": "🇨🇩",
         "code": "CG",
         "dialCode": "242",
-        "format": "+242 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "Congo (Rep.)",
@@ -373,7 +373,7 @@ export default [
         "flag": "🇨🇬",
         "code": "CD",
         "dialCode": "243",
-        "format": "+243 ... ... ..."
+        "format": "+... ... ... ..."
     },
     {
         "name": "Cook Islands",
@@ -381,7 +381,7 @@ export default [
         "flag": "🇨🇰",
         "code": "CK",
         "dialCode": "682",
-        "format": "+682 .. ..."
+        "format": "+... .. ..."
     },
     {
         "name": "Costa Rica",
@@ -389,7 +389,7 @@ export default [
         "flag": "🇨🇷",
         "code": "CR",
         "dialCode": "506",
-        "format": "+506 .... ...."
+        "format": "+... .... ...."
     },
     {
         "name": "Côte d'Ivoire",
@@ -397,7 +397,7 @@ export default [
         "flag": "🇨🇮",
         "code": "CI",
         "dialCode": "225",
-        "format": "+225 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Croatia",
@@ -405,7 +405,7 @@ export default [
         "flag": "🇭🇷",
         "code": "HR",
         "dialCode": "385",
-        "format": "+385 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Cuba",
@@ -413,7 +413,7 @@ export default [
         "flag": "🇨🇺",
         "code": "CU",
         "dialCode": "53",
-        "format": "+53 . ... ...."
+        "format": "+.. . ... ...."
     },
     {
         "name": "Curaçao",
@@ -421,7 +421,7 @@ export default [
         "flag": "🇨🇼",
         "code": "CW",
         "dialCode": "599",
-        "format": "+599 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "Cyprus",
@@ -429,7 +429,7 @@ export default [
         "flag": "🇨🇾",
         "code": "CY",
         "dialCode": "357",
-        "format": "+357 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Czech Republic",
@@ -437,7 +437,7 @@ export default [
         "flag": "🇨🇿",
         "code": "CZ",
         "dialCode": "420",
-        "format": "+420 ... ... ..."
+        "format": "+... ... ... ..."
     },
     {
         "name": "Denmark",
@@ -445,7 +445,7 @@ export default [
         "flag": "🇩🇰",
         "code": "DK",
         "dialCode": "45",
-        "format": "+45 .. .. .. .."
+        "format": "+.. .. .. .. .."
     },
     {
         "name": "Djibouti",
@@ -453,7 +453,7 @@ export default [
         "flag": "🇩🇯",
         "code": "DJ",
         "dialCode": "253",
-        "format": "+253 .. .. .. .."
+        "format": "+... .. .. .. .."
     },
     {
         "name": "Dominica",
@@ -461,7 +461,7 @@ export default [
         "flag": "🇩🇲",
         "code": "DM",
         "dialCode": "1767",
-        "format": "+1767 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Dominican Rep.",
@@ -469,7 +469,7 @@ export default [
         "flag": "🇩🇴",
         "code": "DO",
         "dialCode": "1",
-        "format": "+1 ... ... ...."
+        "format": "+. ... ... ...."
     },
     {
         "name": "Dominican Rep.",
@@ -477,7 +477,7 @@ export default [
         "flag": "🇩🇴",
         "code": "DO",
         "dialCode": "1",
-        "format": "+1 ... ... ...."
+        "format": "+. ... ... ...."
     },
     {
         "name": "Dominican Rep.",
@@ -485,7 +485,7 @@ export default [
         "flag": "🇩🇴",
         "code": "DO",
         "dialCode": "1",
-        "format": "+1 ... ... ...."
+        "format": "+. ... ... ...."
     },
     {
         "name": "Ecuador",
@@ -493,7 +493,7 @@ export default [
         "flag": "🇪🇨",
         "code": "EC",
         "dialCode": "593",
-        "format": "+593 . ... ...."
+        "format": "+... . ... ...."
     },
     {
         "name": "Egypt",
@@ -501,7 +501,7 @@ export default [
         "flag": "🇪🇬",
         "code": "EG",
         "dialCode": "20",
-        "format": "+20 ... ... ...."
+        "format": "+.. ... ... ...."
     },
     {
         "name": "El Salvador",
@@ -509,7 +509,7 @@ export default [
         "flag": "🇸🇻",
         "code": "SV",
         "dialCode": "503",
-        "format": "+503 .... ...."
+        "format": "+... .... ...."
     },
     {
         "name": "Equatorial Guinea",
@@ -517,7 +517,7 @@ export default [
         "flag": "🇬🇶",
         "code": "GQ",
         "dialCode": "240",
-        "format": "+240 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "Eritrea",
@@ -525,7 +525,7 @@ export default [
         "flag": "🇪🇷",
         "code": "ER",
         "dialCode": "291",
-        "format": "+291 . ... ..."
+        "format": "+... . ... ..."
     },
     {
         "name": "Estonia",
@@ -533,7 +533,7 @@ export default [
         "flag": "🇪🇪",
         "code": "EE",
         "dialCode": "372",
-        "format": "+372 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "Eswatini",
@@ -541,7 +541,7 @@ export default [
         "flag": "🇸🇿",
         "code": "SZ",
         "dialCode": "268",
-        "format": "+268 .. .. ...."
+        "format": "+... .. .. ...."
     },
     {
         "name": "Ethiopia",
@@ -549,7 +549,7 @@ export default [
         "flag": "🇪🇹",
         "code": "ET",
         "dialCode": "251",
-        "format": "+251 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "Falkland Islands",
@@ -557,7 +557,7 @@ export default [
         "flag": "🇫🇰",
         "code": "FK",
         "dialCode": "500",
-        "format": "+500 ....."
+        "format": "+... ....."
     },
     {
         "name": "Faroe Islands",
@@ -565,7 +565,7 @@ export default [
         "flag": "🇫🇴",
         "code": "FO",
         "dialCode": "298",
-        "format": "+298 ... ..."
+        "format": "+... ... ..."
     },
     {
         "name": "Fiji",
@@ -573,7 +573,7 @@ export default [
         "flag": "🇫🇯",
         "code": "FJ",
         "dialCode": "679",
-        "format": "+679 .. ....."
+        "format": "+... .. ....."
     },
     {
         "name": "Finland",
@@ -581,7 +581,7 @@ export default [
         "flag": "🇫🇮",
         "code": "FI",
         "dialCode": "358",
-        "format": "+358 .. .... ...."
+        "format": "+... .. .... ...."
     },
     {
         "name": "France",
@@ -589,7 +589,7 @@ export default [
         "flag": "🇫🇷",
         "code": "FR",
         "dialCode": "33",
-        "format": "+33 . .. .. .. .."
+        "format": "+.. . .. .. .. .."
     },
     {
         "name": "French Guiana",
@@ -597,7 +597,7 @@ export default [
         "flag": "🇬🇫",
         "code": "GF",
         "dialCode": "594",
-        "format": "+594 ..... ...."
+        "format": "+... ..... ...."
     },
     {
         "name": "French Polynesia",
@@ -605,7 +605,7 @@ export default [
         "flag": "🇵🇫",
         "code": "PF",
         "dialCode": "689",
-        "format": "+689 .. .. .."
+        "format": "+... .. .. .."
     },
     {
         "name": "Gabon",
@@ -613,7 +613,7 @@ export default [
         "flag": "🇬🇦",
         "code": "GA",
         "dialCode": "241",
-        "format": "+241 . .. .. .."
+        "format": "+... . .. .. .."
     },
     {
         "name": "Gambia",
@@ -621,7 +621,7 @@ export default [
         "flag": "🇬🇲",
         "code": "GM",
         "dialCode": "220",
-        "format": "+220 ... .. .."
+        "format": "+... ... .. .."
     },
     {
         "name": "Georgia",
@@ -629,7 +629,7 @@ export default [
         "flag": "🇬🇪",
         "code": "GE",
         "dialCode": "995",
-        "format": "+995 ... ... ..."
+        "format": "+... ... ... ..."
     },
     {
         "name": "Germany",
@@ -637,7 +637,7 @@ export default [
         "flag": "🇩🇪",
         "code": "DE",
         "dialCode": "49",
-        "format": "+49 ... ......."
+        "format": "+.. ... ......."
     },
     {
         "name": "Ghana",
@@ -645,7 +645,7 @@ export default [
         "flag": "🇬🇭",
         "code": "GH",
         "dialCode": "233",
-        "format": "+233 ... ... ..."
+        "format": "+... ... ... ..."
     },
     {
         "name": "Gibraltar",
@@ -653,7 +653,7 @@ export default [
         "flag": "🇬🇮",
         "code": "GI",
         "dialCode": "350",
-        "format": "+350 ... ....."
+        "format": "+... ... ....."
     },
     {
         "name": "Greece",
@@ -661,7 +661,7 @@ export default [
         "flag": "🇬🇷",
         "code": "GR",
         "dialCode": "30",
-        "format": "+30 ... ... ...."
+        "format": "+.. ... ... ...."
     },
     {
         "name": "Greenland",
@@ -669,7 +669,7 @@ export default [
         "flag": "🇬🇱",
         "code": "GL",
         "dialCode": "299",
-        "format": "+299 .. .. .."
+        "format": "+... .. .. .."
     },
     {
         "name": "Grenada",
@@ -677,7 +677,7 @@ export default [
         "flag": "🇬🇩",
         "code": "GD",
         "dialCode": "1473",
-        "format": "+1473 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Guam",
@@ -685,7 +685,7 @@ export default [
         "flag": "🇬🇺",
         "code": "GU",
         "dialCode": "1671",
-        "format": "+1671 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Guatemala",
@@ -693,7 +693,7 @@ export default [
         "flag": "🇬🇹",
         "code": "GT",
         "dialCode": "502",
-        "format": "+502 .... ...."
+        "format": "+... .... ...."
     },
     {
         "name": "Guinea",
@@ -701,7 +701,7 @@ export default [
         "flag": "🇬🇳",
         "code": "GN",
         "dialCode": "224",
-        "format": "+224 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Guinea-Bissau",
@@ -709,7 +709,7 @@ export default [
         "flag": "🇬🇼",
         "code": "GW",
         "dialCode": "245",
-        "format": "+245 . ......"
+        "format": "+... . ......"
     },
     {
         "name": "Guyana",
@@ -717,7 +717,7 @@ export default [
         "flag": "🇬🇾",
         "code": "GY",
         "dialCode": "592",
-        "format": "+592 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "Haiti",
@@ -725,7 +725,7 @@ export default [
         "flag": "🇭🇹",
         "code": "HT",
         "dialCode": "509",
-        "format": "+509 .... ...."
+        "format": "+... .... ...."
     },
     {
         "name": "Honduras",
@@ -733,7 +733,7 @@ export default [
         "flag": "🇭🇳",
         "code": "HN",
         "dialCode": "504",
-        "format": "+504 .... ...."
+        "format": "+... .... ...."
     },
     {
         "name": "Hong Kong",
@@ -741,7 +741,7 @@ export default [
         "flag": "🇭🇰",
         "code": "HK",
         "dialCode": "852",
-        "format": "+852 .... ...."
+        "format": "+... .... ...."
     },
     {
         "name": "Hungary",
@@ -749,7 +749,7 @@ export default [
         "flag": "🇭🇺",
         "code": "HU",
         "dialCode": "36",
-        "format": "+36 ... ... ..."
+        "format": "+.. ... ... ..."
     },
     {
         "name": "Iceland",
@@ -757,7 +757,7 @@ export default [
         "flag": "🇮🇸",
         "code": "IS",
         "dialCode": "354",
-        "format": "+354 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "India",
@@ -765,7 +765,7 @@ export default [
         "flag": "🇮🇳",
         "code": "IN",
         "dialCode": "91",
-        "format": "+91 ..... ....."
+        "format": "+.. ..... ....."
     },
     {
         "name": "Indonesia",
@@ -773,7 +773,7 @@ export default [
         "flag": "🇮🇩",
         "code": "ID",
         "dialCode": "62",
-        "format": "+62 .. ... .."
+        "format": "+.. .. ... .."
     },
     {
         "name": "Iran",
@@ -781,7 +781,7 @@ export default [
         "flag": "🇮🇷",
         "code": "IR",
         "dialCode": "98",
-        "format": "+98 ... ... ...."
+        "format": "+.. ... ... ...."
     },
     {
         "name": "Iraq",
@@ -789,7 +789,7 @@ export default [
         "flag": "🇮🇶",
         "code": "IQ",
         "dialCode": "964",
-        "format": "+964 ... ... ...."
+        "format": "+... ... ... ...."
     },
     {
         "name": "Ireland",
@@ -797,7 +797,7 @@ export default [
         "flag": "🇮🇪",
         "code": "IE",
         "dialCode": "353",
-        "format": "+353 .. ......."
+        "format": "+... .. ......."
     },
     {
         "name": "Israel",
@@ -805,7 +805,7 @@ export default [
         "flag": "🇮🇱",
         "code": "IL",
         "dialCode": "972",
-        "format": "+972 . ... ...."
+        "format": "+... . ... ...."
     },
     {
         "name": "Italy",
@@ -813,7 +813,7 @@ export default [
         "flag": "🇮🇹",
         "code": "IT",
         "dialCode": "39",
-        "format": "+39 ... ......"
+        "format": "+.. ... ......"
     },
     {
         "name": "Jamaica",
@@ -821,7 +821,7 @@ export default [
         "flag": "🇯🇲",
         "code": "JM",
         "dialCode": "1876",
-        "format": "+1876 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Japan",
@@ -829,7 +829,7 @@ export default [
         "flag": "🇯🇵",
         "code": "JP",
         "dialCode": "81",
-        "format": "+81 ... .. ...."
+        "format": "+.. ... .. ...."
     },
     {
         "name": "Jordan",
@@ -837,7 +837,7 @@ export default [
         "flag": "🇯🇴",
         "code": "JO",
         "dialCode": "962",
-        "format": "+962 . .... ...."
+        "format": "+... . .... ...."
     },
     {
         "name": "Kazakhstan",
@@ -845,7 +845,7 @@ export default [
         "flag": "🇰🇿",
         "code": "KZ",
         "dialCode": "7",
-        "format": "+7 ... ... .. .."
+        "format": "+. ... ... .. .."
     },
     {
         "name": "Kenya",
@@ -853,7 +853,7 @@ export default [
         "flag": "🇰🇪",
         "code": "KE",
         "dialCode": "254",
-        "format": "+254 ... ......"
+        "format": "+... ... ......"
     },
     {
         "name": "Kiribati",
@@ -861,7 +861,7 @@ export default [
         "flag": "🇰🇮",
         "code": "KI",
         "dialCode": "686",
-        "format": "+686 .. ..."
+        "format": "+... .. ..."
     },
     {
         "name": "Kuwait",
@@ -869,7 +869,7 @@ export default [
         "flag": "🇰🇼",
         "code": "KW",
         "dialCode": "965",
-        "format": "+965 .... ...."
+        "format": "+... .... ...."
     },
     {
         "name": "Kyrgyzstan",
@@ -877,7 +877,7 @@ export default [
         "flag": "🇰🇬",
         "code": "KG",
         "dialCode": "996",
-        "format": "+996 ... ... ..."
+        "format": "+... ... ... ..."
     },
     {
         "name": "Latvia",
@@ -885,7 +885,7 @@ export default [
         "flag": "🇱🇻",
         "code": "LV",
         "dialCode": "371",
-        "format": "+371 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Lebanon",
@@ -893,7 +893,7 @@ export default [
         "flag": "🇱🇧",
         "code": "LB",
         "dialCode": "961",
-        "format": "+961 . ... ..."
+        "format": "+... . ... ..."
     },
     {
         "name": "Lesotho",
@@ -901,7 +901,7 @@ export default [
         "flag": "🇱🇸",
         "code": "LS",
         "dialCode": "266",
-        "format": "+266 . ... ...."
+        "format": "+... . ... ...."
     },
     {
         "name": "Liberia",
@@ -909,7 +909,7 @@ export default [
         "flag": "🇱🇷",
         "code": "LR",
         "dialCode": "231",
-        "format": "+231 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Libya",
@@ -917,7 +917,7 @@ export default [
         "flag": "🇱🇾",
         "code": "LY",
         "dialCode": "218",
-        "format": "+218 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Liechtenstein",
@@ -925,7 +925,7 @@ export default [
         "flag": "🇱🇮",
         "code": "LI",
         "dialCode": "423",
-        "format": "+423 ... ... ...."
+        "format": "+... ... ... ...."
     },
     {
         "name": "Lithuania",
@@ -933,7 +933,7 @@ export default [
         "flag": "🇱🇹",
         "code": "LT",
         "dialCode": "370",
-        "format": "+370 ... .. ..."
+        "format": "+... ... .. ..."
     },
     {
         "name": "Luxembourg",
@@ -941,7 +941,7 @@ export default [
         "flag": "🇱🇺",
         "code": "LU",
         "dialCode": "352",
-        "format": "+352 ... ... ..."
+        "format": "+... ... ... ..."
     },
     {
         "name": "Madagascar",
@@ -949,7 +949,7 @@ export default [
         "flag": "🇲🇬",
         "code": "MG",
         "dialCode": "261",
-        "format": "+261 .. .. ....."
+        "format": "+... .. .. ....."
     },
     {
         "name": "Malawi",
@@ -957,7 +957,7 @@ export default [
         "flag": "🇲🇼",
         "code": "MW",
         "dialCode": "265",
-        "format": "+265 . .... ...."
+        "format": "+... . .... ...."
     },
     {
         "name": "Malaysia",
@@ -965,7 +965,7 @@ export default [
         "flag": "🇲🇾",
         "code": "MY",
         "dialCode": "60",
-        "format": "+60 .. .... ...."
+        "format": "+.. .. .... ...."
     },
     {
         "name": "Maldives",
@@ -973,7 +973,7 @@ export default [
         "flag": "🇲🇻",
         "code": "MV",
         "dialCode": "960",
-        "format": "+960 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "Mali",
@@ -981,7 +981,7 @@ export default [
         "flag": "🇲🇱",
         "code": "ML",
         "dialCode": "223",
-        "format": "+223 .. .. ...."
+        "format": "+... .. .. ...."
     },
     {
         "name": "Malta",
@@ -989,7 +989,7 @@ export default [
         "flag": "🇲🇹",
         "code": "MT",
         "dialCode": "356",
-        "format": "+356 .... ...."
+        "format": "+... .... ...."
     },
     {
         "name": "Marshall Islands",
@@ -997,7 +997,7 @@ export default [
         "flag": "🇲🇭",
         "code": "MH",
         "dialCode": "692",
-        "format": "+692 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "Martinique",
@@ -1005,7 +1005,7 @@ export default [
         "flag": "🇲🇶",
         "code": "MQ",
         "dialCode": "596",
-        "format": "+596 ... .. .. .."
+        "format": "+... ... .. .. .."
     },
     {
         "name": "Mauritania",
@@ -1013,7 +1013,7 @@ export default [
         "flag": "🇲🇷",
         "code": "MR",
         "dialCode": "222",
-        "format": "+222 .. .. ...."
+        "format": "+... .. .. ...."
     },
     {
         "name": "Mauritius",
@@ -1021,7 +1021,7 @@ export default [
         "flag": "🇲🇺",
         "code": "MU",
         "dialCode": "230",
-        "format": "+230 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "Mexico",
@@ -1029,7 +1029,7 @@ export default [
         "flag": "🇲🇽",
         "code": "MX",
         "dialCode": "52",
-        "format": "+52 .. .. ...."
+        "format": "+.. .. .. ...."
     },
     {
         "name": "Micronesia",
@@ -1037,7 +1037,7 @@ export default [
         "flag": "🇫🇲",
         "code": "FM",
         "dialCode": "691",
-        "format": "+691 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "Moldova",
@@ -1045,7 +1045,7 @@ export default [
         "flag": "🇲🇩",
         "code": "MD",
         "dialCode": "373",
-        "format": "+373 .... ...."
+        "format": "+... .... ...."
     },
     {
         "name": "Monaco",
@@ -1053,7 +1053,7 @@ export default [
         "flag": "🇲🇨",
         "code": "MC",
         "dialCode": "377",
-        "format": "+377 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Mongolia",
@@ -1061,7 +1061,7 @@ export default [
         "flag": "🇲🇳",
         "code": "MN",
         "dialCode": "976",
-        "format": "+976 .. .. ...."
+        "format": "+... .. .. ...."
     },
     {
         "name": "Montenegro",
@@ -1069,7 +1069,7 @@ export default [
         "flag": "🇲🇪",
         "code": "ME",
         "dialCode": "382",
-        "format": "+382 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Montserrat",
@@ -1077,7 +1077,7 @@ export default [
         "flag": "🇲🇸",
         "code": "MS",
         "dialCode": "1664",
-        "format": "+1664 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Morocco",
@@ -1085,7 +1085,7 @@ export default [
         "flag": "🇲🇦",
         "code": "MA",
         "dialCode": "212",
-        "format": "+212 .. .... ..."
+        "format": "+... .. .... ..."
     },
     {
         "name": "Mozambique",
@@ -1093,7 +1093,7 @@ export default [
         "flag": "🇲🇿",
         "code": "MZ",
         "dialCode": "258",
-        "format": "+258 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Myanmar",
@@ -1101,7 +1101,7 @@ export default [
         "flag": "🇲🇲",
         "code": "MM",
         "dialCode": "95",
-        "format": "+95 ... ..."
+        "format": "+.. ... ..."
     },
     {
         "name": "Namibia",
@@ -1109,7 +1109,7 @@ export default [
         "flag": "🇳🇦",
         "code": "NA",
         "dialCode": "264",
-        "format": "+264 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "Nauru",
@@ -1117,7 +1117,7 @@ export default [
         "flag": "🇳🇷",
         "code": "NR",
         "dialCode": "674",
-        "format": "+674 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "Nepal",
@@ -1125,7 +1125,7 @@ export default [
         "flag": "🇳🇵",
         "code": "NP",
         "dialCode": "977",
-        "format": "+977 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Netherlands",
@@ -1133,7 +1133,7 @@ export default [
         "flag": "🇳🇱",
         "code": "NL",
         "dialCode": "31",
-        "format": "+31 .. ........"
+        "format": "+.. .. ........"
     },
     {
         "name": "New Caledonia",
@@ -1141,7 +1141,7 @@ export default [
         "flag": "🇳🇨",
         "code": "NC",
         "dialCode": "687",
-        "format": "+687 .. ...."
+        "format": "+... .. ...."
     },
     {
         "name": "New Zealand",
@@ -1149,7 +1149,7 @@ export default [
         "flag": "🇳🇿",
         "code": "NZ",
         "dialCode": "64",
-        "format": "+64 ... ... ...."
+        "format": "+.. ... ... ...."
     },
     {
         "name": "Nicaragua",
@@ -1157,7 +1157,7 @@ export default [
         "flag": "🇳🇮",
         "code": "NI",
         "dialCode": "505",
-        "format": "+505 .... ...."
+        "format": "+... .... ...."
     },
     {
         "name": "Niger",
@@ -1165,7 +1165,7 @@ export default [
         "flag": "🇳🇪",
         "code": "NE",
         "dialCode": "227",
-        "format": "+227 .. .. ...."
+        "format": "+... .. .. ...."
     },
     {
         "name": "Nigeria",
@@ -1173,7 +1173,7 @@ export default [
         "flag": "🇳🇬",
         "code": "NG",
         "dialCode": "234",
-        "format": "+234 .. ... .."
+        "format": "+... .. ... .."
     },
     {
         "name": "Niue",
@@ -1181,7 +1181,7 @@ export default [
         "flag": "🇳🇺",
         "code": "NU",
         "dialCode": "683",
-        "format": "+683 ...."
+        "format": "+... ...."
     },
     {
         "name": "Norfolk Island",
@@ -1189,7 +1189,7 @@ export default [
         "flag": "🇳🇫",
         "code": "NF",
         "dialCode": "672",
-        "format": "+672 ... ..."
+        "format": "+... ... ..."
     },
     {
         "name": "North Macedonia",
@@ -1197,7 +1197,7 @@ export default [
         "flag": "🇲🇰",
         "code": "MK",
         "dialCode": "389",
-        "format": "+389 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Northern Mariana Islands",
@@ -1205,7 +1205,7 @@ export default [
         "flag": "🇲🇵",
         "code": "MP",
         "dialCode": "1670",
-        "format": "+1670 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Norway",
@@ -1213,7 +1213,7 @@ export default [
         "flag": "🇳🇴",
         "code": "NO",
         "dialCode": "47",
-        "format": "+47 ... .. ..."
+        "format": "+.. ... .. ..."
     },
     {
         "name": "Oman",
@@ -1221,7 +1221,7 @@ export default [
         "flag": "🇴🇲",
         "code": "OM",
         "dialCode": "968",
-        "format": "+968 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Pakistan",
@@ -1229,7 +1229,7 @@ export default [
         "flag": "🇵🇰",
         "code": "PK",
         "dialCode": "92",
-        "format": "+92 ... ......."
+        "format": "+.. ... ......."
     },
     {
         "name": "Palau",
@@ -1237,7 +1237,7 @@ export default [
         "flag": "🇵🇼",
         "code": "PW",
         "dialCode": "680",
-        "format": "+680 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "Palestine",
@@ -1245,7 +1245,7 @@ export default [
         "flag": "🇵🇸",
         "code": "PS",
         "dialCode": "970",
-        "format": "+970 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "Panama",
@@ -1253,7 +1253,7 @@ export default [
         "flag": "🇵🇦",
         "code": "PA",
         "dialCode": "507",
-        "format": "+507 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "Papua New Guinea",
@@ -1261,7 +1261,7 @@ export default [
         "flag": "🇵🇬",
         "code": "PG",
         "dialCode": "675",
-        "format": "+675 ... .. ..."
+        "format": "+... ... .. ..."
     },
     {
         "name": "Paraguay",
@@ -1269,7 +1269,7 @@ export default [
         "flag": "🇵🇾",
         "code": "PY",
         "dialCode": "595",
-        "format": "+595 ... ... ..."
+        "format": "+... ... ... ..."
     },
     {
         "name": "Peru",
@@ -1277,7 +1277,7 @@ export default [
         "flag": "🇵🇪",
         "code": "PE",
         "dialCode": "51",
-        "format": "+51 ... ... ..."
+        "format": "+.. ... ... ..."
     },
     {
         "name": "Philippines",
@@ -1285,7 +1285,7 @@ export default [
         "flag": "🇵🇭",
         "code": "PH",
         "dialCode": "63",
-        "format": "+63 ... ...."
+        "format": "+.. ... ...."
     },
     {
         "name": "Poland",
@@ -1293,7 +1293,7 @@ export default [
         "flag": "🇵🇱",
         "code": "PL",
         "dialCode": "48",
-        "format": "+48 ... ... ..."
+        "format": "+.. ... ... ..."
     },
     {
         "name": "Portugal",
@@ -1301,7 +1301,7 @@ export default [
         "flag": "🇵🇹",
         "code": "PT",
         "dialCode": "351",
-        "format": "+351 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "Puerto Rico",
@@ -1309,7 +1309,7 @@ export default [
         "flag": "🇵🇷",
         "code": "PR",
         "dialCode": "1",
-        "format": "+1 ... ... ...."
+        "format": "+. ... ... ...."
     },
     {
         "name": "Puerto Rico",
@@ -1317,7 +1317,7 @@ export default [
         "flag": "🇵🇷",
         "code": "PR",
         "dialCode": "1",
-        "format": "+1 ... ... ...."
+        "format": "+. ... ... ...."
     },
     {
         "name": "Qatar",
@@ -1325,7 +1325,7 @@ export default [
         "flag": "🇶🇦",
         "code": "QA",
         "dialCode": "974",
-        "format": "+974 .... ...."
+        "format": "+... .... ...."
     },
     {
         "name": "Réunion",
@@ -1333,7 +1333,7 @@ export default [
         "flag": "🇷🇪",
         "code": "RE",
         "dialCode": "262",
-        "format": "+262 ..... ...."
+        "format": "+... ..... ...."
     },
     {
         "name": "Romania",
@@ -1341,7 +1341,7 @@ export default [
         "flag": "🇷🇴",
         "code": "RO",
         "dialCode": "40",
-        "format": "+40 .. ... ...."
+        "format": "+.. .. ... ...."
     },
     {
         "name": "Russian Federation",
@@ -1349,7 +1349,7 @@ export default [
         "flag": "🇷🇺",
         "code": "RU",
         "dialCode": "7",
-        "format": "+7 ... ... .. .."
+        "format": "+. ... ... .. .."
     },
     {
         "name": "Rwanda",
@@ -1357,7 +1357,7 @@ export default [
         "flag": "🇷🇼",
         "code": "RW",
         "dialCode": "250",
-        "format": "+250 ... ... ..."
+        "format": "+... ... ... ..."
     },
     {
         "name": "Saint Kitts & Nevis",
@@ -1365,7 +1365,7 @@ export default [
         "flag": "🇰🇳",
         "code": "KN",
         "dialCode": "1869",
-        "format": "+1869 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Saint Lucia",
@@ -1373,7 +1373,7 @@ export default [
         "flag": "🇱🇨",
         "code": "LC",
         "dialCode": "1758",
-        "format": "+1758 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Saint Vincent & the Grenadines",
@@ -1381,7 +1381,7 @@ export default [
         "flag": "🇻🇨",
         "code": "VC",
         "dialCode": "1784",
-        "format": "+1784 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Samoa",
@@ -1389,7 +1389,7 @@ export default [
         "flag": "🇼🇸",
         "code": "WS",
         "dialCode": "685",
-        "format": "+685 .. ...."
+        "format": "+... .. ...."
     },
     {
         "name": "San Marino",
@@ -1397,7 +1397,7 @@ export default [
         "flag": "🇸🇲",
         "code": "SM",
         "dialCode": "378",
-        "format": "+378 .... ......"
+        "format": "+... .... ......"
     },
     {
         "name": "São Tomé & Príncipe",
@@ -1405,7 +1405,7 @@ export default [
         "flag": "🇸🇹",
         "code": "ST",
         "dialCode": "239",
-        "format": "+239 .. ....."
+        "format": "+... .. ....."
     },
     {
         "name": "Saudi Arabia",
@@ -1413,7 +1413,7 @@ export default [
         "flag": "🇸🇦",
         "code": "SA",
         "dialCode": "966",
-        "format": "+966 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "Senegal",
@@ -1421,7 +1421,7 @@ export default [
         "flag": "🇸🇳",
         "code": "SN",
         "dialCode": "221",
-        "format": "+221 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "Serbia",
@@ -1429,7 +1429,7 @@ export default [
         "flag": "🇷🇸",
         "code": "RS",
         "dialCode": "381",
-        "format": "+381 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "Seychelles",
@@ -1437,7 +1437,7 @@ export default [
         "flag": "🇸🇨",
         "code": "SC",
         "dialCode": "248",
-        "format": "+248 . ... ..."
+        "format": "+... . ... ..."
     },
     {
         "name": "Sierra Leone",
@@ -1445,7 +1445,7 @@ export default [
         "flag": "🇸🇱",
         "code": "SL",
         "dialCode": "232",
-        "format": "+232 .. ......"
+        "format": "+... .. ......"
     },
     {
         "name": "Singapore",
@@ -1453,7 +1453,7 @@ export default [
         "flag": "🇸🇬",
         "code": "SG",
         "dialCode": "65",
-        "format": "+65 .... ...."
+        "format": "+.. .... ...."
     },
     {
         "name": "Sint Maarten",
@@ -1461,7 +1461,7 @@ export default [
         "flag": "🇸🇽",
         "code": "SX",
         "dialCode": "1721",
-        "format": "+1721 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Slovakia",
@@ -1469,7 +1469,7 @@ export default [
         "flag": "🇸🇰",
         "code": "SK",
         "dialCode": "421",
-        "format": "+421 ... ... ..."
+        "format": "+... ... ... ..."
     },
     {
         "name": "Slovenia",
@@ -1477,7 +1477,7 @@ export default [
         "flag": "🇸🇮",
         "code": "SI",
         "dialCode": "386",
-        "format": "+386 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Solomon Islands",
@@ -1485,7 +1485,7 @@ export default [
         "flag": "🇸🇧",
         "code": "SB",
         "dialCode": "677",
-        "format": "+677 ....."
+        "format": "+... ....."
     },
     {
         "name": "Somalia",
@@ -1493,7 +1493,7 @@ export default [
         "flag": "🇸🇴",
         "code": "SO",
         "dialCode": "252",
-        "format": "+252 . ... ..."
+        "format": "+... . ... ..."
     },
     {
         "name": "South Africa",
@@ -1501,7 +1501,7 @@ export default [
         "flag": "🇿🇦",
         "code": "ZA",
         "dialCode": "27",
-        "format": "+27 .. ... ...."
+        "format": "+.. .. ... ...."
     },
     {
         "name": "South Korea",
@@ -1509,7 +1509,7 @@ export default [
         "flag": "🇰🇷",
         "code": "KR",
         "dialCode": "82",
-        "format": "+82 .. ... ...."
+        "format": "+.. .. ... ...."
     },
     {
         "name": "South Sudan",
@@ -1517,7 +1517,7 @@ export default [
         "flag": "🇸🇸",
         "code": "SS",
         "dialCode": "211",
-        "format": "+211 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "Spain",
@@ -1525,7 +1525,7 @@ export default [
         "flag": "🇪🇸",
         "code": "ES",
         "dialCode": "34",
-        "format": "+34 ... ... ..."
+        "format": "+.. ... ... ..."
     },
     {
         "name": "Sri Lanka",
@@ -1533,7 +1533,7 @@ export default [
         "flag": "🇱🇰",
         "code": "LK",
         "dialCode": "94",
-        "format": "+94 .. ... ...."
+        "format": "+.. .. ... ...."
     },
     {
         "name": "Sudan",
@@ -1541,7 +1541,7 @@ export default [
         "flag": "🇸🇩",
         "code": "SD",
         "dialCode": "249",
-        "format": "+249 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "Suriname",
@@ -1549,7 +1549,7 @@ export default [
         "flag": "🇸🇷",
         "code": "SR",
         "dialCode": "597",
-        "format": "+597 ... ..."
+        "format": "+... ... ..."
     },
     {
         "name": "Sweden",
@@ -1557,7 +1557,7 @@ export default [
         "flag": "🇸🇪",
         "code": "SE",
         "dialCode": "46",
-        "format": "+46 .. ... .. .."
+        "format": "+.. .. ... .. .."
     },
     {
         "name": "Switzerland",
@@ -1565,7 +1565,7 @@ export default [
         "flag": "🇨🇭",
         "code": "CH",
         "dialCode": "41",
-        "format": "+41 .. ... .. .."
+        "format": "+.. .. ... .. .."
     },
     {
         "name": "Syria",
@@ -1573,7 +1573,7 @@ export default [
         "flag": "🇸🇾",
         "code": "SY",
         "dialCode": "963",
-        "format": "+963 .. .... ..."
+        "format": "+... .. .... ..."
     },
     {
         "name": "Taiwan",
@@ -1581,7 +1581,7 @@ export default [
         "flag": "🇹🇼",
         "code": "TW",
         "dialCode": "886",
-        "format": "+886 .... ...."
+        "format": "+... .... ...."
     },
     {
         "name": "Tajikistan",
@@ -1589,7 +1589,7 @@ export default [
         "flag": "🇹🇯",
         "code": "TJ",
         "dialCode": "992",
-        "format": "+992 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "Tanzania",
@@ -1597,7 +1597,7 @@ export default [
         "flag": "🇹🇿",
         "code": "TZ",
         "dialCode": "255",
-        "format": "+255 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "Thailand",
@@ -1605,7 +1605,7 @@ export default [
         "flag": "🇹🇭",
         "code": "TH",
         "dialCode": "66",
-        "format": "+66 .. ... ..."
+        "format": "+.. .. ... ..."
     },
     {
         "name": "Timor-Leste",
@@ -1613,7 +1613,7 @@ export default [
         "flag": "🇹🇱",
         "code": "TL",
         "dialCode": "670",
-        "format": "+670 ... ...."
+        "format": "+... ... ...."
     },
     {
         "name": "Togo",
@@ -1621,7 +1621,7 @@ export default [
         "flag": "🇹🇬",
         "code": "TG",
         "dialCode": "228",
-        "format": "+228 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Tokelau",
@@ -1629,7 +1629,7 @@ export default [
         "flag": "🇹🇰",
         "code": "TK",
         "dialCode": "690",
-        "format": "+690 ...."
+        "format": "+... ...."
     },
     {
         "name": "Tonga",
@@ -1637,7 +1637,7 @@ export default [
         "flag": "🇹🇴",
         "code": "TO",
         "dialCode": "676",
-        "format": "+676 ....."
+        "format": "+... ....."
     },
     {
         "name": "Trinidad & Tobago",
@@ -1645,7 +1645,7 @@ export default [
         "flag": "🇹🇹",
         "code": "TT",
         "dialCode": "1868",
-        "format": "+1868 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Tunisia",
@@ -1653,7 +1653,7 @@ export default [
         "flag": "🇹🇳",
         "code": "TN",
         "dialCode": "216",
-        "format": "+216 .. ... ..."
+        "format": "+... .. ... ..."
     },
     {
         "name": "Turkey",
@@ -1661,7 +1661,7 @@ export default [
         "flag": "🇹🇷",
         "code": "TR",
         "dialCode": "90",
-        "format": "+90 ... ... .. .."
+        "format": "+.. ... ... .. .."
     },
     {
         "name": "Turkmenistan",
@@ -1669,7 +1669,7 @@ export default [
         "flag": "🇹🇲",
         "code": "TM",
         "dialCode": "993",
-        "format": "+993 . ... ...."
+        "format": "+... . ... ...."
     },
     {
         "name": "Turks & Caicos Islands",
@@ -1677,7 +1677,7 @@ export default [
         "flag": "🇹🇨",
         "code": "TC",
         "dialCode": "1649",
-        "format": "+1649 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "Tuvalu",
@@ -1685,7 +1685,7 @@ export default [
         "flag": "🇹🇻",
         "code": "TV",
         "dialCode": "688",
-        "format": "+688 ....."
+        "format": "+... ....."
     },
     {
         "name": "Uganda",
@@ -1693,7 +1693,7 @@ export default [
         "flag": "🇺🇬",
         "code": "UG",
         "dialCode": "256",
-        "format": "+256 ... ... ..."
+        "format": "+... ... ... ..."
     },
     {
         "name": "Ukraine",
@@ -1701,7 +1701,7 @@ export default [
         "flag": "🇺🇦",
         "code": "UA",
         "dialCode": "380",
-        "format": "+380 .. ... .. .."
+        "format": "+... .. ... .. .."
     },
     {
         "name": "United Arab Emirates",
@@ -1709,7 +1709,7 @@ export default [
         "flag": "🇦🇪",
         "code": "AE",
         "dialCode": "971",
-        "format": "+971 . ... ...."
+        "format": "+... . ... ...."
     },
     {
         "name": "United Kingdom",
@@ -1717,7 +1717,7 @@ export default [
         "flag": "🇬🇧",
         "code": "GB",
         "dialCode": "44",
-        "format": "+44 .... ......"
+        "format": "+.. .... ......"
     },
     {
         "name": "Uruguay",
@@ -1725,7 +1725,7 @@ export default [
         "flag": "🇺🇾",
         "code": "UY",
         "dialCode": "598",
-        "format": "+598 . ... .. .."
+        "format": "+... . ... .. .."
     },
     {
         "name": "US Virgin Islands",
@@ -1733,7 +1733,7 @@ export default [
         "flag": "🇻🇮",
         "code": "VI",
         "dialCode": "1340",
-        "format": "+1340 ... ...."
+        "format": "+.... ... ...."
     },
     {
         "name": "USA",
@@ -1741,7 +1741,7 @@ export default [
         "flag": "🇺🇸",
         "code": "US",
         "dialCode": "1",
-        "format": "+1 ... ... ...."
+        "format": "+. ... ... ...."
     },
     {
         "name": "Uzbekistan",
@@ -1749,7 +1749,7 @@ export default [
         "flag": "🇺🇿",
         "code": "UZ",
         "dialCode": "998",
-        "format": "+998 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "Vanuatu",
@@ -1757,7 +1757,7 @@ export default [
         "flag": "🇻🇺",
         "code": "VU",
         "dialCode": "678",
-        "format": "+678 ....."
+        "format": "+... ....."
     },
     {
         "name": "Venezuela",
@@ -1765,7 +1765,7 @@ export default [
         "flag": "🇻🇪",
         "code": "VE",
         "dialCode": "58",
-        "format": "+58 ... ... ...."
+        "format": "+.. ... ... ...."
     },
     {
         "name": "Vietnam",
@@ -1773,7 +1773,7 @@ export default [
         "flag": "🇻🇳",
         "code": "VN",
         "dialCode": "84",
-        "format": "+84 .. .... ..."
+        "format": "+.. .. .... ..."
     },
     {
         "name": "Wallis & Futuna",
@@ -1781,7 +1781,7 @@ export default [
         "flag": "🇼🇫",
         "code": "WF",
         "dialCode": "681",
-        "format": "+681 .. ...."
+        "format": "+... .. ...."
     },
     {
         "name": "Yemen",
@@ -1789,7 +1789,7 @@ export default [
         "flag": "🇾🇪",
         "code": "YE",
         "dialCode": "967",
-        "format": "+967 . ... ..."
+        "format": "+... . ... ..."
     },
     {
         "name": "Zambia",
@@ -1797,7 +1797,7 @@ export default [
         "flag": "🇿🇲",
         "code": "ZM",
         "dialCode": "260",
-        "format": "+260 .. ... ...."
+        "format": "+... .. ... ...."
     },
     {
         "name": "Zimbabwe",
@@ -1805,6 +1805,6 @@ export default [
         "flag": "🇿🇼",
         "code": "ZW",
         "dialCode": "263",
-        "format": "+263 . ......"
+        "format": "+... . ......"
     }
 ]
