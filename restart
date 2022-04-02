@@ -9,6 +9,8 @@ docker run --name TelegramBuildClient -itd telegram_build_client;
 docker cp TelegramBuildClient:/src/dist .
 # remove container after using;
 docker container rm -f TelegramBuildClient;
+# remove image after using;
+docker rmi -f telegram_build_client;
 
 cd ..;
 docker-compose down;
