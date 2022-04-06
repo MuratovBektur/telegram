@@ -1,7 +1,8 @@
+/// <reference path="../globals.d.ts" />
 <script setup lang="ts">
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
-import { computed, onMounted, reactive, ref, watch } from "vue";
+import { computed, onMounted, reactive, ref } from "vue";
 import api from "@/lib/api";
 import CountryList from "@/components/t-country-list.vue";
 import TCheckBox from "@/components/t-check-box.vue";
@@ -10,11 +11,6 @@ import TInput from "@/components/t-input.vue";
 const router = useRouter();
 const store = useStore();
 
-const submitBtnState = reactive({
-  loading: false,
-  disabled: false,
-});
-
 const phoneInput = reactive({
   focus: false,
   isValid: true,
@@ -22,25 +18,26 @@ const phoneInput = reactive({
 
 const state = reactive({
   showCountries: false,
-  keepUserSignedIn: true
+  keepUserSignedIn: true,
 });
 
 async function getGeo() {
   try {
-    const country = store.state.country
+    const country = store.state.country;
     if (country.code) {
-      onSelectCountry(country)
-    }
-    else {
+      onSelectCountry(country);
+    } else {
       const [countries, countryNameByIp] = await Promise.all([
-        api.get('get-countries'),
-        api.get('get-country-code'),
+        api.get("get-countries"),
+        api.get("get-country-code"),
       ]);
-      store.commit('SET_COUNTRIES', countries)
+      store.commit("SET_COUNTRIES", countries);
       if (countryNameByIp) {
-        const country = countries.find((country: any) => country.code === countryNameByIp);
+        const country = countries.find(
+          (country: CountryType) => country.code === countryNameByIp
+        );
         if (country) {
-          onSelectCountry(country)
+          onSelectCountry(country);
         }
       }
     }
@@ -66,8 +63,8 @@ function onInputCountry() {
 }
 function onInputPhone(e: InputEvent) {
   const inputLength = selectedCountry.phone.length;
-  const isCanAddSpace = e.data && selectedCountry.format[inputLength] === ' ';
-    // insert space after phone operator code like => +1 123 4567890
+  const isCanAddSpace = e.data && selectedCountry.format[inputLength] === " ";
+  // insert space after phone operator code like => +1 123 4567890
   if (isCanAddSpace) {
     selectedCountry.phone += " ";
   }
@@ -87,35 +84,21 @@ const selectedCountry = reactive({
 const showAllCountries = ref(false);
 
 const showSubmitBtn = computed(() => {
-  const phone = selectedCountry.phone.replaceAll(/\s/g, '');
-  const format = selectedCountry.format.replaceAll(/\s/g, '');
-  return phone.startsWith("+") && phone.length === format.length
+  const phone = selectedCountry.phone.replaceAll(/\s/g, "");
+  const format = selectedCountry.format.replaceAll(/\s/g, "");
+  return phone.startsWith("+") && phone.length === format.length;
 });
 
-const isCheckingPhoneNumber = ref(false)
+const isCheckingPhoneNumber = ref(false);
 
-function onSelectCountry(country: any) {
+function onSelectCountry(country: CountryType) {
   if (!country.phone && country.phoneCode) {
     country.phone = `+${country.phoneCode} `;
   }
-  Object.assign(selectedCountry, country)
+  Object.assign(selectedCountry, country);
 
   phoneInput.focus = true;
   showAllCountries.value = true;
-}
-
-function isMatchPhoneFormatPattern (phone: string, format: string): boolean {
-  for (let i = 0; i < phone.length; i++) {
-    const phoneChar = phone[i]
-    const formatChar = format[i]
-    if (formatChar === '+' && phoneChar !== '+') return false
-    else if (
-      formatChar === '.' &&
-      (phoneChar === ' ' || isNaN(Number(phoneChar)))
-    ) return false
-    else if (formatChar === ' ' && phoneChar !== ' ') return false
-  }
-  return true
 }
 
 async function submitForm() {
@@ -125,9 +108,9 @@ async function submitForm() {
     const isValid = /\+[\d\s]+/.test(selectedCountry.phone);
     if (isValid) {
       store.commit("SET_COUNTRY", selectedCountry);
-      store.commit('SET_COUNTRY_NAME_BY_IP', selectedCountry.code)
+      store.commit("SET_COUNTRY_NAME_BY_IP", selectedCountry.code);
       return router.push("/verify-phone");
-    } 
+    }
     phoneInput.isValid = false;
     isCheckingPhoneNumber.value = false;
   }, 1000);

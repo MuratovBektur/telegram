@@ -19,7 +19,7 @@ services:
       - ./client:/src
       - ./client/dist:/src/dist
       - /src/node_modules
-    command: yarn serve
+    command: yarn dev
   telegram_server:
     container_name: "telegram_server"
     restart: "no"
@@ -48,5 +48,5 @@ services:
       - telegram_client
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - ./nginx/telegram-available-local:/etc/nginx/telegram-available
+      - ./nginx/telegram-available-dev:/etc/nginx/telegram-available
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf

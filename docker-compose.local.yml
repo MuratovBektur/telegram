@@ -19,7 +19,7 @@ services:
       - ./client:/src
       - ./client/dist:/src/dist
       - /src/node_modules
-    command: yarn serve
+    command: yarn dev
   telegram_server:
     container_name: "telegram_server"
     restart: "no"
@@ -44,7 +44,7 @@ services:
     restart: "no"
     container_name: "telegram_nginx"
     ports:
-      - 80:8000
+      - 8000:80
     depends_on:
       - telegram_server
       - telegram_client

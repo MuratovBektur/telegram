@@ -1,4 +1,4 @@
-import { EventEmitter, fnType } from "./event-emiiter";
+import { EventEmitter, fnType } from "./event-emitter";
 import WebSocketClient, { IWebSocketClient } from "./websocket-client";
 
 export interface IApi {

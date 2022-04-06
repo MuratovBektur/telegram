@@ -22,7 +22,7 @@ const store = createStore<IState>({
         code: "",
       },
       countries: [],
-      countryNameByIp: ''
+      countryNameByIp: "",
     };
   },
   mutations: {
@@ -34,7 +34,7 @@ const store = createStore<IState>({
     },
     SET_COUNTRY_NAME_BY_IP(state: IState, countryNameByIp: string) {
       state.countryNameByIp = countryNameByIp;
-    }
+    },
   },
 });
 

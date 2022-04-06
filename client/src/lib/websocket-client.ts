@@ -1,4 +1,5 @@
-import { EventEmitter } from "./event-emiiter";
+import "../globals.d.ts";
+import { EventEmitter } from "./event-emitter";
 
 interface IOptions {
   protocols?: string | string[];
@@ -8,13 +9,15 @@ interface IOptions {
 }
 
 export interface IWebSocketClient {
-  addEventListener: (eventName: string, cb: (e: any) => void) => void | null;
-  removeEventListener: (eventName: string, cb: (e: any) => void) => void;
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
+  addEventListener: (eventName: string, cb: (...args: any[]) => void) => void | null;
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
+  removeEventListener: (eventName: string, cb: (...args: any[]) => void) => void;
   send: (data: any) => void;
 }
-
-export function isObject(obj: any): boolean {
-  return !Array.isArray(obj) && typeof obj === "object" && obj != null;
+/* eslint-disable  @typescript-eslint/explicit-module-boundary-types */
+export function isObject(variable: any): boolean {
+  return Object.prototype.toString.call(variable) === "[object Object]";
 }
 
 export default class WebSocketClient
@@ -106,12 +109,14 @@ export default class WebSocketClient
     this.socket.removeEventListener(eventName, listener);
   }
 
-  public send(data: any): void {
+  public send(data: string | PlainObjectType | Array<any>): void {
     if (this.socket.readyState === WebSocket.OPEN) {
       if (Array.isArray(data) || isObject(data)) {
         data = JSON.stringify(data);
       }
-      this.socket.send(data);
+      if (typeof data === 'string') {
+        this.socket.send(data);
+      }
     } else {
       if (this.options.debug) {
         console.log(

@@ -1,3 +1,4 @@
+/// <reference path="globals.d.ts" />
 <script setup lang="ts">
 import {
   onMounted,
@@ -8,18 +9,9 @@ import {
   PropType,
 } from "vue";
 
-type Country = {
-  name: string;
-  flag: string;
-  format: string;
-  phone: string;
-  phoneCode: string;
-  code: string;
-  dialCode: string;
-};
 const props = defineProps({
   countries: {
-    type: Array as PropType<Country[]>,
+    type: Array as PropType<CountryType[]>,
     required: true,
   },
   countrySearch: {
@@ -37,14 +29,14 @@ const countryListRef = ref(null);
 
 const filteredCountries = computed(() => {
   if (props.showAllCountries || !props.countrySearch) return props.countries;
-  return props.countries.filter((country: any) => {
+  return props.countries.filter((country: CountryType) => {
     return country.name
       .toLowerCase()
       .includes(props.countrySearch.toLowerCase());
   });
 });
 
-function onSelectCountry(country: any) {
+function onSelectCountry(country: CountryType) {
   emit("onSelectCountry", { ...country });
 }
 

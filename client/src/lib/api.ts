@@ -1,8 +1,9 @@
 import axios from "./axios";
 
 export interface IRequest {
-  get (url: string): Promise<any>;
-  post (url: string, data?: any): Promise<any>;
+  get(url: string): Promise<any>;
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
+  post(url: string, data?: any): Promise<any>;
 }
 
 class Request implements IRequest {
@@ -14,6 +15,7 @@ class Request implements IRequest {
       console.log(error);
     }
   }
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
   async post(url: string, data?: any) {
     try {
       const res = await axios.post("/" + url, data);
