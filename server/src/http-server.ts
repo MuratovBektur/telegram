@@ -1,6 +1,5 @@
 import express from "express";
 import geoip from "geoip-lite";
-import createError from "http-errors";
 
 import { sendMsg } from "./lib/index.js";
 import helper from "./helpers/index.js";

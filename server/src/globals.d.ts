@@ -12,7 +12,7 @@ type pathToHooksType = {
 }
 declare type hook = (options: IHook) => void
 
-declare type pathToHooks = (options: pathToHooksType) => void
+declare function pathToHooks(options: pathToHooksType): void
 
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 declare type fnType = (...args: any[]) => any;
