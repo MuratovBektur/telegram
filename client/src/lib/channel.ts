@@ -1,54 +1,31 @@
-import { EventEmitter, fnType } from "./event-emitter";
-import WebSocketClient, { IWebSocketClient } from "./websocket-client";
+/* eslint-disable  @typescript-eslint/triple-slash-reference */
+/// <reference path="../globals.d.ts" />
+import { io } from "socket.io-client";
 
-export interface IApi {
-  eventHandlers: Map<string, [fnType]>;
-  socket: any;
-}
-
-class Api extends EventEmitter implements IApi {
+class Channel {
   socket;
 
-  constructor(url: string, protocols?: string | string[]) {
-    super();
-
-    this.socket = new WebSocketClient(url, {
-      debug: true,
-      protocols: protocols,
-      reconnectInterval: 5000,
-      pingInterval: 5000,
+  constructor() {
+    const socketProtocol = window.location.protocol === "https:" ? "wss" : "ws";
+    const socketUrl = `${socketProtocol}://${window.location.host}`;
+    this.socket = io(socketUrl, {
+      path: "/ws",
+      reconnectionDelayMax: 2000,
     });
-    this.socket.addEventListener("close", (e) => {
-      console.log("yehoo", e);
-    });
-    this.socket.addEventListener("message", (e) => {
-      console.log("message", e.data);
-      if (typeof e.data === "string") {
-        const message = JSON.parse(e.data);
-        this.emit(message.event, message.data);
-      }
-    });
-    setInterval(() => {
-      console.log("this.socket", this.socket);
-    }, 11000);
+    this.socket.emit("test");
   }
 
-  subscribe(eventName: string, cb: fnType) {
-    this.addEventListener(eventName, cb);
+  subscribe(event: string, cb: fnType) {
+    this.socket.on(event, cb);
   }
 
-  unsubscribe(eventName: string, cb: fnType) {
-    this.removeEventListener(eventName, cb);
+  unsubscribe(event: string, cb: fnType) {
+    this.socket.off(event, cb);
   }
-
-  send(eventName: string, data?: any): void {
-    const message = [eventName]
-    if (data) message.push(data)
-    //   event: eventName,
-    //   data,
-    // };
-    this.socket.send(message);
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
+  send(event: string, data: any) {
+    this.socket.emit(event, data);
   }
 }
 
-export default new Api("ws://localhost:8000/api");
+export default new Channel();

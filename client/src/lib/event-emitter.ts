@@ -1,7 +1,9 @@
-export type fnType = (...args: any[]) => any;
+/* eslint-disable  @typescript-eslint/triple-slash-reference */
+/// <reference path="../globals.d.ts" />
 
 export interface IEventEmitter {
   eventHandlers: Map<string, [fnType]>;
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
   emit: (eventName: string, data: any) => void;
   on: (eventName: string, cb: fnType) => void;
   addEventListener: (eventName: string, cb: fnType) => void;
@@ -12,24 +14,24 @@ export interface IEventEmitter {
 }
 export class EventEmitter implements IEventEmitter {
   eventHandlers = new Map();
-
-  emit(eventName: string, data: any) {
+  /* eslint-disable  @typescript-eslint/explicit-module-boundary-types */
+  emit(eventName: string, data: any): void {
     if (!this.eventHandlers.has(eventName))
       console.warn(`Event ${eventName} not found`);
     const subscribers = this.eventHandlers.get(eventName) || [];
     subscribers.forEach((fn: fnType) => fn(data));
   }
 
-  on(eventName: string, cb: fnType) {
+  on(eventName: string, cb: fnType): void {
     const subscribers = this.eventHandlers.get(eventName) || [];
     this.eventHandlers.set(eventName, [...subscribers, cb]);
   }
 
-  addEventListener(eventName: string, cb: fnType) {
+  addEventListener(eventName: string, cb: fnType): void {
     this.on(eventName, cb);
   }
 
-  removeEventListener(eventName: string, cb: fnType) {
+  removeEventListener(eventName: string, cb: fnType): void {
     if (!this.eventHandlers.has(eventName))
       console.warn(`Event ${eventName} not found`);
     let subscribers = this.eventHandlers.get(eventName) || [];
@@ -37,7 +39,7 @@ export class EventEmitter implements IEventEmitter {
     this.eventHandlers.set(eventName, subscribers);
   }
 
-  removeAllEventListener(eventName: string) {
+  removeAllEventListener(eventName: string): void {
     if (!this.eventHandlers.has(eventName))
       console.warn(`Event ${eventName} not found`);
     this.eventHandlers.delete(eventName);

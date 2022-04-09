@@ -1,6 +1,7 @@
 import axios from "./axios";
 
 export interface IRequest {
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
   get(url: string): Promise<any>;
   /* eslint-disable  @typescript-eslint/no-explicit-any */
   post(url: string, data?: any): Promise<any>;

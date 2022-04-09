@@ -1,6 +1,8 @@
 export const clickOutside = {
   beforeMount(
+    /* eslint-disable  @typescript-eslint/no-explicit-any */
     el: { [key: string]: any },
+    /* eslint-disable  @typescript-eslint/no-explicit-any */
     binding: { [key: string]: any }
   ): void {
     el.clickOutsideEvent = function (event: any) {
@@ -10,7 +12,8 @@ export const clickOutside = {
     };
     document.body.addEventListener("click", el.clickOutsideEvent);
   },
-  unmounted(el: any) {
+  /* eslint-disable  @typescript-eslint/no-explicit-any */
+  unmounted(el: { [key: string]: any }): void {
     document.body.removeEventListener("click", el.clickOutsideEvent);
   },
 };

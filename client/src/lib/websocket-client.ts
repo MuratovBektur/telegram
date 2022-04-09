@@ -1,4 +1,5 @@
-import "../globals.d.ts";
+/* eslint-disable  @typescript-eslint/triple-slash-reference */
+/// <reference path="../globals.d.ts" />
 import { EventEmitter } from "./event-emitter";
 
 interface IOptions {
@@ -7,23 +8,13 @@ interface IOptions {
   debug?: boolean;
   pingInterval?: false | number;
 }
-
-export interface IWebSocketClient {
-  /* eslint-disable  @typescript-eslint/no-explicit-any */
-  addEventListener: (eventName: string, cb: (...args: any[]) => void) => void | null;
-  /* eslint-disable  @typescript-eslint/no-explicit-any */
-  removeEventListener: (eventName: string, cb: (...args: any[]) => void) => void;
-  send: (data: any) => void;
-}
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 /* eslint-disable  @typescript-eslint/explicit-module-boundary-types */
-export function isObject(variable: any): boolean {
+export function isPlainObject(variable: any): boolean {
   return Object.prototype.toString.call(variable) === "[object Object]";
 }
 
-export default class WebSocketClient
-  extends EventEmitter
-  implements IWebSocketClient
-{
+export default class WebSocketClient extends EventEmitter {
   private options: IOptions = {
     protocols: undefined,
     reconnectInterval: false,
@@ -33,13 +24,14 @@ export default class WebSocketClient
 
   private socket: WebSocket;
   private url: string;
+  private isAlive = false;
 
   constructor(url: string, options?: string | string[] | IOptions) {
     super();
     if (typeof options === "string" || Array.isArray(options)) {
       const protocols = options;
       this.options.protocols = protocols;
-    } else if (isObject(options)) {
+    } else if (isPlainObject(options)) {
       this.options = {
         ...this.options,
         ...options,
@@ -52,13 +44,32 @@ export default class WebSocketClient
   private connect(url: string, protocols?: string | string[]): void {
     this.socket = new WebSocket(url, protocols);
 
-    this.socket.onerror = (e: Event) => {
+    this.socket.addEventListener("message", (e: MessageEvent) => {
+      if (this.options.debug) {
+        console.log(`[WS]: Message received: ${e.data}`);
+      }
+      let message: Array<any> | string;
+      try {
+        message = JSON.parse(e.data);
+        if (Array.isArray(message)) {
+          const [event, data] = message;
+          this.emit(event, data);
+          // check pong message after sending ping message
+          if (event === "pong") {
+            this.isAlive = true;
+          }
+        }
+      } catch {
+        console.error("expected array message");
+      }
+    });
+
+    this.socket.addEventListener("error", (e: Event) => {
       if (this.options.debug) {
         console.log("[WS]: errorEvent", e);
       }
-    };
-
-    this.socket.onclose = (e: CloseEvent) => {
+    });
+    this.socket.addEventListener("close", (e: CloseEvent) => {
       if (this.options.debug) {
         console.log("[WS]: closeEvent", e);
         if (e.wasClean) {
@@ -67,19 +78,38 @@ export default class WebSocketClient
         }
       }
       this.reconnect();
-    };
+    });
     this.releaseEventListener();
     this.checkPing();
+  }
+  // check pong message after sending ping message
+  private checkPong(): void {
+    // if no pong message was received within half a second,
+    // then we reconnect to the ws server
+    this.isAlive = false;
+    setTimeout(() => {
+      if (this.options.debug) {
+        console.warn("[WS]: Pong timeout");
+      }
+      if (!this.isAlive) {
+        this.reconnect()
+      }
+    }, 500);
   }
 
   private checkPing(): void {
     if (this.options.pingInterval) {
       setInterval(() => {
         if (this.socket.readyState === WebSocket.OPEN) {
-          this.send({
-            event: "ping",
-            data: null,
-          });
+          this.checkPong();
+          this.send(["ping"]);
+        } else {
+          if (this.options.debug) {
+            console.log(
+              `[WS]: Can't send ping readyState: ${this.socket.readyState}`
+            );
+          }
+          this.reconnect();
         }
       }, this.options.pingInterval);
     }
@@ -93,28 +123,22 @@ export default class WebSocketClient
     });
   }
 
-  addEventListener(
-    eventName: string,
-    listener: (...args: any[]) => void
-  ): void {
+  addEventListener(eventName: string, listener: fnType): void {
     super.addEventListener(eventName, listener);
     this.socket.addEventListener(eventName, listener);
   }
 
-  removeEventListener(
-    eventName: string,
-    listener: (...args: any[]) => void
-  ): void {
+  removeEventListener(eventName: string, listener: fnType): void {
     super.removeEventListener(eventName, listener);
     this.socket.removeEventListener(eventName, listener);
   }
 
   public send(data: string | PlainObjectType | Array<any>): void {
     if (this.socket.readyState === WebSocket.OPEN) {
-      if (Array.isArray(data) || isObject(data)) {
+      if (Array.isArray(data) || isPlainObject(data)) {
         data = JSON.stringify(data);
       }
-      if (typeof data === 'string') {
+      if (typeof data === "string") {
         this.socket.send(data);
       }
     } else {

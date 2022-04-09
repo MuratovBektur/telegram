@@ -1,3 +1,4 @@
+/// <reference path="globals.d.ts" />
 <script setup lang="ts">
 import { RouterView } from "vue-router";
 import channel from "@/lib/channel";
@@ -5,20 +6,12 @@ function start() {
   try {
     console.log(channel);
     channel.send("test", {});
-    setInterval(() => {
-      channel.send("test", 123);
-    }, 3000);
-    channel.subscribe("connection", () => {
-      console.log("ws connected");
-    });
-    // channel.removeAllEventListener("test2");
-    channel.subscribe("getUserList", (data) => {
-      console.log(data);
-      console.log("asdfasdfgetUserList");
-    });
-    channel.subscribe("error", (data) => {
-      console.log("error", data);
-    });
+    // setInterval(() => {
+    //   channel.send("test", 123);
+    // }, 3000);
+    // channel.subscribe("connection", () => {
+    //   console.log("ws connected");
+    // });
   } catch (error) {
     console.error(error);
   }
