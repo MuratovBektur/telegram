@@ -1,8 +1,8 @@
-import { wssHooks } from "../lib/index.js";
+/* eslint-disable  @typescript-eslint/triple-slash-reference */
+/// <reference path="../globals.d.ts" />
 
-const { hook } = wssHooks;
-
-hook("echo", ({ ws, data }: { ws: any; data: any }) => {
-  console.log("data2", data);
-  ws.post(data);
-});
+export default function hook ({socket, io}) {
+  socket.on('test', (data: any) => {
+    console.log(data)
+  })
+}

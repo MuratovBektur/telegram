@@ -1,26 +1,29 @@
-import { wssHooks } from "./lib/index.js";
 import app from "./http-server.js";
-import { createServer } from "http";
-
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-
-const { wss, pathToHooks } = wssHooks;
+import { createServer } from "http";
+import { Server as SocketServer } from "socket.io";
+import { pathToHooks } from "./lib/index.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 async function startServer() {
   try {
-    const server = createServer();
+    const httpServer = createServer(app);
     const PORT = Number(process.env.PORT) || 4000;
-
-    wss({
-      server,
+    const io = new SocketServer(httpServer, {
+      path: '/ws',
+      pingInterval: 3000,
     });
-
-    server.on("request", app);
-    pathToHooks(__dirname, "ws-hooks");
-    server.listen(PORT, () => console.log("http/ws server listening on", PORT));
+    io.on("connection", async (socket) => {
+      await pathToHooks({
+        dirname: __dirname,
+        nameFolder: "ws-hooks",
+        socket,
+        io
+      });
+    });
+    httpServer.listen(PORT, () => console.log("http/ws server listening on", PORT));
   } catch (e) {
     // logger.log({
     //   level: 'error',
