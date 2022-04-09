@@ -1,9 +1,9 @@
 /* eslint-disable  @typescript-eslint/triple-slash-reference */
 /// <reference path="../globals.d.ts" />
-import { io } from "socket.io-client";
+import { io, Socket } from "socket.io-client";
 
 class Channel {
-  socket;
+  socket: Socket;
 
   constructor() {
     const socketProtocol = window.location.protocol === "https:" ? "wss" : "ws";
