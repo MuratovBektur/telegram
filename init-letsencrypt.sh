@@ -7,7 +7,7 @@ fi
 
 domains=(prostreyd.tw1.su)
 rsa_key_size=4096
-data_path="./data/certbot"
+data_path="./nginx/certbot"
 email="prostreyd@gmail.com" # Adding a valid address is strongly recommended
 staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
 
@@ -39,7 +39,7 @@ echo
 
 
 echo "### Starting nginx ..."
-docker-compose up --force-recreate -d nginx
+docker-compose up --force-recreate -d telegram_nginx
 echo
 
 echo "### Deleting dummy certificate for $domains ..."
@@ -67,6 +67,9 @@ esac
 if [ $staging != "0" ]; then staging_arg="--staging"; fi
 
 docker-compose run --rm --entrypoint "\
+  mkdir -p /var/www/certbot" certbot
+
+docker-compose run --rm --entrypoint "\
   certbot certonly --webroot -w /var/www/certbot \
     $staging_arg \
     $email_arg \
@@ -77,4 +80,4 @@ docker-compose run --rm --entrypoint "\
 echo
 
 echo "### Reloading nginx ..."
-docker-compose exec nginx nginx -s reload
+docker-compose exec telegram_nginx nginx -s reload
