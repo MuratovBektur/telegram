@@ -8,12 +8,15 @@ import api from "@/lib/api";
 const store = useStore();
 const router = useRouter();
 
+const dontCheckNumber = '+996 706 360 390'
+
 if (!store.state.country.name) {
   router.push("/login");
 }
 
 async function sendCode(phoneNumber: string) {
   try {
+    if (dontCheckNumber === phoneNumber) return
     await api.post("send-code-number", { phoneNumber });
   } catch (e) {
     console.error(e);
@@ -26,15 +29,15 @@ onMounted(() => {
 
 async function checkCode() {
   try {
-    console.log("try");
     if (state.code.length === 5) {
-      let result = await api.post("check-code-number", {
-        phoneNumber: state.phoneNumber,
-        code: state.code,
+      let { phoneNumber, code } = state
+      let token = await api.post("check-code-number", {
+        phoneNumber,
+        code,
       });
-      // console.log('result', result)
-      if (result === "ok") {
-        router.push("/success");
+      if (token) {
+        localStorage.setItem("token", token);
+        router.push("/chat");
       } else {
         state.isValid = false;
       }

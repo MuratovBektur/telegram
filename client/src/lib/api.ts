@@ -14,15 +14,16 @@ class Request implements IRequest {
       return res.data;
     } catch (error) {
       console.log(error);
+      throw error
     }
   }
-  /* eslint-disable  @typescript-eslint/no-explicit-any */
   async post(url: string, data?: any) {
     try {
       const res = await axios.post("/" + url, data);
       return res.data;
     } catch (error) {
       console.log(error);
+      throw error
     }
   }
 }

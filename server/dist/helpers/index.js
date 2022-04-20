@@ -4,6 +4,6 @@ export default {
         return Math.floor(rand);
     },
     isObject(v) {
-        return !!v && typeof v === 'object' && !Array.isArray(v);
-    }
+        return Object.prototype.toString.call(v) === "[object Object]";
+    },
 };

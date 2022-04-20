@@ -8,9 +8,13 @@ class Channel {
   constructor() {
     const socketProtocol = window.location.protocol === "https:" ? "wss" : "ws";
     const socketUrl = `${socketProtocol}://${window.location.host}`;
+    const token = localStorage.getItem("token");
     this.socket = io(socketUrl, {
       path: "/ws",
       reconnectionDelayMax: 2000,
+      query: {
+        token
+      }
     });
     this.socket.emit("test");
   }

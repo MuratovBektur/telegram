@@ -5,6 +5,10 @@ TWILIO_ACCOUNT_SID=your_twilio_account_sid
 TWILIO_AUTH_TOKEN=your_twilio_auth_token
 TWILIO_FROM_NUMBER=your_twilio_number
 
+POSTGRES_DB=your_postgres_db
+POSTGRES_USER=your_postgres_user
+POSTGRES_PASSWORD=your_postgres_password
+
 To run the application in a specific mode (local, dev, prod), run the corresponding command (./restart-local, ./restart-dev, ./restart)
 
 ## Before launching into production mode

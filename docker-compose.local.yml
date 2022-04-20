@@ -20,13 +20,24 @@ services:
       - ./client/dist:/src/dist
       - /src/node_modules
     command: yarn dev
+  telegram_db:
+    image: postgres:13.6
+    env_file:
+      - ./server/configs/local.env
+    volumes:
+      - ../2. Init Database:/docker-entrypoint-initdb.d
+      - .:/var/lib/postgresql/data
+    ports:
+      - 5432
   telegram_server:
     container_name: "telegram_server"
-    restart: "no"
+    restart: always
     env_file:
       - ./server/configs/local.env
     build:
       context: ./server
+    depends_on:
+      - telegram_db
     environment:
       - TZ=Asia/Bishkek
       - NODE_ENV=development

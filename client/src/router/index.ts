@@ -1,13 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
-import indexPage from "@/pages/index.vue";
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: "/",
-      name: "index",
-      component: indexPage,
+      path: "/chat",
+      name: "chat",
+      component: () => import("@/pages/chat.vue"),
     },
     {
       path: "/login",
