@@ -9,6 +9,8 @@ POSTGRES_DB=your_postgres_db
 POSTGRES_USER=your_postgres_user
 POSTGRES_PASSWORD=your_postgres_password
 
+TOKEN_SECRET=your_token_string
+
 To run the application in a specific mode (local, dev, prod), run the corresponding command (./restart-local, ./restart-dev, ./restart)
 
 ## Before launching into production mode

@@ -1,18 +1,23 @@
-import { Table, Column, Model, Index, Length, DataType } from "sequelize-typescript";
-
+import {
+  Table,
+  Column,
+  Model,
+  Index,
+  Length,
+  DataType,
+} from "sequelize-typescript";
+const maxLength = 25;
 @Table({
   freezeTableName: true,
 })
-export class User extends Model {
-  @Length({ min: 3 })
-  // @Index({
-  //   type: 'UNIQUE',
-  //   unique: true,
-  // })
-  
-  // @Column({
-  //   type: DataType.DECIMAL(25, 0)
-  // })
-  @Column
-  phoneNumber:  bigint;
+export class telegram_user extends Model {
+  @Length({ min: 7, max: maxLength })
+  @Index({
+    type: "UNIQUE",
+    unique: true,
+  })
+  @Column({
+    type: DataType.DECIMAL(maxLength, 0),
+  })
+  phone_number: number;
 }

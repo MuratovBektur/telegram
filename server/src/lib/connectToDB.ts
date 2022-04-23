@@ -25,20 +25,20 @@ const importAllFileNames = async (path: string) => {
   );
 };
 
-const pathToModel = (paths: Array <string> ) => {
+const pathToModel = (paths: Array<string>) => {
   const normalizedFolder = path.join(...paths);
-  return normalizedFolder
-}
+  return normalizedFolder;
+};
 
-export async function connectToDB () {
+export async function connectToDB() {
   try {
-    const normalizedFolder = pathToModel([__dirname, '..', 'models'])
+    const normalizedFolder = pathToModel([__dirname, "..", "models"]);
     const POSTGRES_DB = process.env.POSTGRES_DB;
     const POSTGRES_USER = process.env.POSTGRES_USER;
     const POSTGRES_PASSWORD = process.env.POSTGRES_PASSWORD;
     const modelNames = getAllFileNames(normalizedFolder);
     const importedFiles = await importAllFileNames(normalizedFolder);
-    
+
     const sequelize = new Sequelize({
       dialect: "postgres",
       host: "telegram_db",
@@ -50,31 +50,7 @@ export async function connectToDB () {
     sequelize.sync();
     sequelize.addModels(importedFiles);
   } catch (e) {
-    console.error('error connectToDB');
+    console.error("error connectToDB");
     console.error(e);
   }
 }
-
-
-// import pg from "pg";
-
-// const Client = pg.Client;
-
-// // console.log("process.env", process.env);
-
-// const client = new Client({
-//   host: "telegram_db",
-//   user: "telegram",
-//   database: "telegram",
-//   password: "546754itmes",
-//   port: 5432,
-// });
-// client.connect();
-// client.query("SELECT * FROM user", (err, res) => {
-//   if (err) {
-//     return console.error(err);
-//   }
-//   console.log("res", res);
-//   console.log(res.rows);
-//   // client.end();
-// });

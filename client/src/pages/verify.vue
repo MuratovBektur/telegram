@@ -1,14 +1,17 @@
+///
+<reference path="../globals.d.ts" />
 <script setup lang="ts">
 import { reactive, onMounted } from "vue";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 import { useStore } from "vuex";
 import TInput from "@/components/t-input.vue";
 import api from "@/lib/api";
 
 const store = useStore();
 const router = useRouter();
+const route = useRoute();
 
-const dontCheckNumber = '+996 706 360 390'
+const dontCheckNumber = "+996 706 360 390";
 
 if (!store.state.country.name) {
   router.push("/login");
@@ -16,7 +19,7 @@ if (!store.state.country.name) {
 
 async function sendCode(phoneNumber: string) {
   try {
-    if (dontCheckNumber === phoneNumber) return
+    if (dontCheckNumber === phoneNumber) return;
     await api.post("send-code-number", { phoneNumber });
   } catch (e) {
     console.error(e);
@@ -30,13 +33,17 @@ onMounted(() => {
 async function checkCode() {
   try {
     if (state.code.length === 5) {
-      let { phoneNumber, code } = state
+      let { phoneNumber, code } = state;
       let token = await api.post("check-code-number", {
         phoneNumber,
         code,
       });
       if (token) {
-        localStorage.setItem("token", token);
+        if (route.query.keepUserSignedIn) {
+          localStorage.setItem("token", token);
+        } else {
+          sessionStorage.setItem("token", token);
+        }
         router.push("/chat");
       } else {
         state.isValid = false;

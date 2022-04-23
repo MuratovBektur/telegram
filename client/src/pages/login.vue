@@ -1,9 +1,11 @@
-/// <reference path="../globals.d.ts" />
+///
+<reference path="../globals.d.ts" />
 <script setup lang="ts">
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 import { computed, onMounted, reactive, ref } from "vue";
 import api from "@/lib/api";
+import helpers from "@/helpers";
 import CountryList from "@/components/t-country-list.vue";
 import TCheckBox from "@/components/t-check-box.vue";
 import TInput from "@/components/t-input.vue";
@@ -104,16 +106,20 @@ function onSelectCountry(country: CountryType) {
 async function submitForm() {
   if (isCheckingPhoneNumber.value) return;
   isCheckingPhoneNumber.value = true;
-  setTimeout(async () => {
-    const isValid = /\+[\d\s]+/.test(selectedCountry.phone);
-    if (isValid) {
-      store.commit("SET_COUNTRY", selectedCountry);
-      store.commit("SET_COUNTRY_NAME_BY_IP", selectedCountry.code);
-      return router.push("/verify-phone");
-    }
+  const isValid = /\+[\d\s]+/.test(selectedCountry.phone);
+  if (!isValid) {
     phoneInput.isValid = false;
     isCheckingPhoneNumber.value = false;
-  }, 1000);
+    return;
+  }
+  await helpers.sleep(500);
+  store.commit("SET_COUNTRY", selectedCountry);
+  store.commit("SET_COUNTRY_NAME_BY_IP", selectedCountry.code);
+  let path = "/verify-phone";
+  if (state.keepUserSignedIn) {
+    path += "?keepUserSignedIn=true";
+  }
+  router.push(path);
 }
 </script>
 

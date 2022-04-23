@@ -1,7 +1,10 @@
 ///
 <reference path="../globals.d.ts" />
 <script setup lang="ts">
+import channel from "@/lib/channel";
 console.log("in");
+console.log(channel);
+channel.send("test", {});
 </script>
 
 <template>

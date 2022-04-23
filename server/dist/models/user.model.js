@@ -7,26 +7,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Table, Column, Model, Length } from "sequelize-typescript";
-let User = class User extends Model {
-    phoneNumber;
+import { Table, Column, Model, Index, Length, DataType, } from "sequelize-typescript";
+const maxLength = 25;
+let telegram_user = class telegram_user extends Model {
+    phone_number;
 };
 __decorate([
-    Length({ min: 3 })
-    // @Index({
-    //   type: 'UNIQUE',
-    //   unique: true,
-    // })
-    // @Column({
-    //   type: DataType.DECIMAL(25, 0)
-    // })
-    ,
-    Column,
-    __metadata("design:type", BigInt)
-], User.prototype, "phoneNumber", void 0);
-User = __decorate([
+    Length({ min: 7, max: maxLength }),
+    Index({
+        type: "UNIQUE",
+        unique: true,
+    }),
+    Column({
+        type: DataType.DECIMAL(maxLength, 0),
+    }),
+    __metadata("design:type", Number)
+], telegram_user.prototype, "phone_number", void 0);
+telegram_user = __decorate([
     Table({
         freezeTableName: true,
     })
-], User);
-export { User };
+], telegram_user);
+export { telegram_user };
