@@ -1,14 +1,22 @@
 import jwt from "jsonwebtoken";
-import util from "util";
-const sign = util.promisify(jwt.sign);
+
+const sign = (body: object, key: jwt.Secret, options: jwt.SignOptions) => {
+  return new Promise((resolve, reject) => {
+    jwt.sign(body, key, options, (err, result) => {
+      if (err) reject(err);
+      resolve(result);
+    });
+  });
+};
+
 const verify = (token: string, key: jwt.Secret) => {
   return new Promise((resolve, reject) => {
     jwt.verify(token, key, (err, result) => {
       if (err) reject(err);
-      if (typeof result === "string") {
-        resolve(result);
+      if (result && typeof result === 'object' && result.phoneNumber) {
+        resolve(result.phoneNumber);
       }
-      reject("token must be string");
+      reject(new Error("token is incorrect"));
     });
   });
 };
@@ -16,10 +24,12 @@ const verify = (token: string, key: jwt.Secret) => {
 const TOKEN_SECRET = process.env.TOKEN_SECRET;
 
 class TokenManager {
-  async generateAccessToken(username: string) {
+  async generateAccessToken(phoneNumber: string) {
     try {
       if (!TOKEN_SECRET) throw "token secret not found";
-      const token = await sign(username, TOKEN_SECRET);
+      const token = await sign({ phoneNumber }, TOKEN_SECRET, {
+        expiresIn: "7d"
+      });
       return token;
     } catch (err) {
       console.error(err);
@@ -29,11 +39,8 @@ class TokenManager {
   async verifyAccessToken(token: string) {
     try {
       if (!TOKEN_SECRET) throw "token secret not found";
-      const phoneNumber = await verify(token, TOKEN_SECRET);
-      if (typeof phoneNumber === "string") {
-        return phoneNumber;
-      }
-      throw "token must be string";
+      const body = await verify(token, TOKEN_SECRET);
+      return body
     } catch (err) {
       console.error(err);
       return null;

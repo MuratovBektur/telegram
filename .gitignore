@@ -1,7 +1,7 @@
 node_modules
 client/dist
 nginx/certbot
-pgdata
+postgresql/
 
 # all env files
 *.env
