@@ -20,7 +20,7 @@ const phoneInput = reactive({
 
 const state = reactive({
   showCountries: false,
-  keepUserSignedIn: true,
+  keepUserSignedIn: false,
 });
 
 async function getGeo() {
