@@ -1,4 +1,5 @@
-/// <reference path="globals.d.ts" />
+///
+<reference path="globals.d.ts" />
 <script setup lang="ts">
 import {
   onMounted,
