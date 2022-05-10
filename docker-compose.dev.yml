@@ -56,9 +56,6 @@ services:
     depends_on:
       - telegram_server
       - telegram_client
-    links:
-      - telegram_server
-      - telegram_client
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./nginx/telegram-available-dev:/etc/nginx/telegram-available

@@ -38,11 +38,9 @@ services:
     restart: "no"
     container_name: "telegram_nginx"
     ports:
-      - "80:80"
-      - "443:443"
+      - 80:80
+      - 443:443
     depends_on:
-      - telegram_server
-    links:
       - telegram_server
     volumes:
       - /etc/localtime:/etc/localtime:ro
