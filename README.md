@@ -20,5 +20,5 @@ To run the application in a specific mode (local, dev, prod), run the correspond
 4) Change the "server_name" field in nginx/telegram-available/telegram.conf to your domain names and and after the path /etc/letsencrypt/live/ to the ssl_certificate field and ssl_certificate_key field
 5) Change the "init-letsencrypt.sh" file where you must change the "domains" field to your domain names and change the email field to your email
 6) Run the command "./init-letsencrypt.sh" 
-7) Revert old nginx settings with http 2.0 mode in nginx/prod/config.conf file
+7) Revert old nginx settings with http 2.0 mode in nginx/telegram-available/telegram.conf file
 8) Run app with command "./restart"
